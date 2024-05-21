@@ -1,13 +1,14 @@
 import datetime
 import math
 
-import numpy as np
+
 import torch
 from torch import tensor
 from tqdm import tqdm
 from backward_propagation import *
 from forward_propagation import *
 import matplotlib.pyplot as plt
+
 
 
 def L_layer_model(train_dataloader, val_dataloader, layers_dims, learning_rate, num_iterations, batch_norm,
@@ -69,21 +70,39 @@ def Predict(test_dataloader, parameters, batch_norm):
 
 
 
-def save_cost_graph(costs, filename, learning_rate,batch_norm,use_l2,epsilon,num_iterations,train_batch_size,test_batch_size):
+
+def save_cost_graph(costs, filename, learning_rate, batch_norm, use_l2, epsilon, num_iterations, train_batch_size, test_batch_size, train_acc, dev_acc, test_acc):
     """
-    Saves a graph of the costs over time to a file.
+    Saves a graph of the costs and accuracies over time to a file.
     """
 
+    fig, ax1 = plt.subplots()
 
-    plt.plot(costs)
-    plt.ylabel('Cost')
-    plt.xlabel('Steps')
-    plt.title(f"Cost over time with learning rate {learning_rate}, \n batch norm {batch_norm}, use l2 {use_l2}, epsilon {epsilon}, num iterations {num_iterations},\n train batch size {train_batch_size}, test batch size {test_batch_size}")
+    # Plotting the cost on the left y-axis
+    color = 'tab:red'
+    ax1.set_xlabel('Steps')
+    ax1.set_ylabel('Cost', color=color)
+    ax1.plot(costs, color=color)
+    ax1.tick_params(axis='y', labelcolor=color)
 
-    # Set the step size for the x-axis ticks
-    # Save the graph to a file
-    date=datetime.datetime.now()
-    plt.savefig(f"{filename}_{str(date)}.png")
+    # Creating a second y-axis to plot the accuracies
+    ax2 = ax1.twinx()
+    color = 'tab:blue'
+    ax2.set_ylabel('Accuracy', color=color)
+    ax2.plot(train_acc, label='Train Accuracy', color='blue', linestyle='--')
+    ax2.plot(dev_acc, label='Dev Accuracy', color='green', linestyle='-.')
+    ax2.plot(test_acc, label='Test Accuracy', color='purple', linestyle=':')
+    ax2.tick_params(axis='y', labelcolor=color)
+    ax2.legend(loc='upper left', bbox_to_anchor=(0.5, 1.15))
+
+    # Adding a title and adjusting the layout
+    plt.title(f"Training Overview with learning rate {learning_rate}, batch norm {batch_norm}, use L2 {use_l2},\n epsilon {epsilon}, iterations {num_iterations}, train batch size {train_batch_size}, test batch size {test_batch_size}")
+    fig.tight_layout()
+
+    # Saving the graph to a file with a timestamp
+    current_time = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    plt.savefig(f"{filename}_{current_time}.png")
 
     # Display the graph
     plt.show()
+

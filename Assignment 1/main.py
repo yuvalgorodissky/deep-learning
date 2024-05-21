@@ -31,10 +31,17 @@ def train(layers, batch_norm, learning_rate, num_iterations=80, train_batch_size
     # Train the model
     params, losses = L_layer_model(train_dataloader, val_dataloader, layers, learning_rate, num_iterations,
                                    batch_norm=batch_norm, use_l2=use_l2, epislon=epislon)
+    train_acc = Predict(train_dataloader, params, batch_norm)
+    print(f"Train accuracy: {train_acc:.4f}")
+    dev_acc = Predict(val_dataloader, params, batch_norm)
+    print(f"Dev accuracy: {dev_acc:.4f}")
+    # Predict the test set
+    acc_test = Predict(test_dataloader, params, batch_norm)
+    print(f"Test accuracy: {acc_test:.4f}")
     save_cost_graph(losses, "losses", learning_rate, batch_norm, use_l2, epislon, num_iterations, train_batch_size,
-                    test_batch_size)
-    acc = Predict(test_dataloader, params, batch_norm)
-    print(f"Test accuracy: {acc:.4f}")
+                    test_batch_size, train_acc, dev_acc, acc_test)
+
+
 
 
 def main():

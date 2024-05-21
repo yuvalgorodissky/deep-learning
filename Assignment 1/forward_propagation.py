@@ -72,7 +72,7 @@ def L_model_forward(X, parameters, use_batchnorm):
 
 def compute_cost(AL, Y, parameters=None, epsilon=1e-4, use_l2=False):
     m = Y.size()[0]
-    cost = -torch.sum(Y * torch.log(AL)) / m
+    cost = -torch.sum(Y * torch.log(AL+1e-8)) / m
     if use_l2:
         L2_cost = 0
         for key in parameters:

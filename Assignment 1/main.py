@@ -46,11 +46,11 @@ def train(layers, batch_norm, learning_rate, num_iterations=80, train_batch_size
 
 def main():
     layers = [28 * 28, 20, 7, 5, 10]
-    batch_norms = [False, True]
+    batch_norms = [True]
     learning_rate = 0.009
-    uses_l2 =  [False, True]
+    uses_l2 =  [ True]
     epislon = 1e-4
-    nums_iterations = [50, 100, 300]
+    nums_iterations = [50]
     train_batch_size = 64
     test_batch_size = 16
     for batch_norm in batch_norms:

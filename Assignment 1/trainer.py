@@ -41,7 +41,7 @@ def L_layer_model(train_dataloader, val_dataloader, layers_dims, learning_rate, 
                 acc = Predict(val_dataloader, params, batch_norm)
                 acc_dev.append(acc)
                 pbar.set_description(f"Loss after step {step_num + 1}: {step_loss:.4f} | Dev accuracy: {acc:.4f}")
-                if len(acc_dev) > 1 and abs(acc_dev[-1] - acc_dev[-2]) < 1e-5:
+                if len(acc_dev) > 2 and abs(acc_dev[-1] - acc_dev[-2]) < 1e-8 and abs(acc_dev[-2] - acc_dev[-3]) < 1e-8:
                     print(f"Early stopping at epoch {i + 1}")
                     return params, losses
 
@@ -69,35 +69,47 @@ def Predict(test_dataloader, parameters, batch_norm):
 
 
 
-
-
-def save_cost_graph(costs, filename, learning_rate, batch_norm, use_l2, epsilon, num_iterations, train_batch_size, test_batch_size, train_acc, dev_acc, test_acc):
+def save_cost_graph(costs, filename, learning_rate, batch_norm, use_l2, epsilon, num_iterations, train_batch_size,
+                    test_batch_size, train_acc, dev_acc, test_acc):
     """
-    Saves a graph of the costs and accuracies over time to a file.
+    Saves a graph of the costs with the graph on the left and larger text boxes with reduced padding on the right.
     """
 
-    fig, ax1 = plt.subplots()
+    fig = plt.figure(figsize=(12, 6))  # Adjusted figure size for better layout
+    gs = fig.add_gridspec(1, 2, width_ratios=[3, 1])  # Grid spec with width ratio 3:1 for graph to text boxes
 
-    # Plotting the cost on the left y-axis
-    color = 'tab:red'
-    ax1.set_xlabel('Steps')
-    ax1.set_ylabel('Cost', color=color)
-    ax1.plot(costs, color=color)
-    ax1.tick_params(axis='y', labelcolor=color)
+    ax = fig.add_subplot(gs[0])  # Adding the graph on the left part of the grid
 
-    # Creating a second y-axis to plot the accuracies
-    ax2 = ax1.twinx()
-    color = 'tab:blue'
-    ax2.set_ylabel('Accuracy', color=color)
-    ax2.plot(train_acc, label='Train Accuracy', color='blue', linestyle='--')
-    ax2.plot(dev_acc, label='Dev Accuracy', color='green', linestyle='-.')
-    ax2.plot(test_acc, label='Test Accuracy', color='purple', linestyle=':')
-    ax2.tick_params(axis='y', labelcolor=color)
-    ax2.legend(loc='upper left', bbox_to_anchor=(0.5, 1.15))
+    # Plotting the cost
+    ax.set_xlabel('Steps')
+    ax.set_ylabel('Cost')
+    ax.plot(costs)
+    ax.tick_params(axis='y')
 
-    # Adding a title and adjusting the layout
-    plt.title(f"Training Overview with learning rate {learning_rate}, batch norm {batch_norm}, use L2 {use_l2},\n epsilon {epsilon}, iterations {num_iterations}, train batch size {train_batch_size}, test batch size {test_batch_size}")
-    fig.tight_layout()
+    # Creating a blank right panel for text boxes
+    ax_text = fig.add_subplot(gs[1])  # Text boxes on the right part of the grid
+    ax_text.axis('off')  # Hide the axis
+
+    # Adding training parameters and accuracies in text boxes
+    param_details = (
+        f"Learning Rate: {learning_rate}\n"
+        f"Batch Norm: {batch_norm}\n"
+        f"Use L2 Regularization: {use_l2}\n"
+        f"Epsilon: {epsilon}\n"
+        f"Iterations: {num_iterations}\n"
+        f"Train Batch Size: {train_batch_size}\n"
+        f"Test Batch Size: {test_batch_size}"
+    )
+    accuracy_details = f"Train Acc: {train_acc * 100:.2f}%,\nDev Acc: {dev_acc * 100:.2f}%,\nTest Acc: {test_acc * 100:.2f}%"
+
+    # Place text in the right panel with larger text boxes and less padding
+    ax_text.text(0.5, 0.7, accuracy_details, ha="center", fontsize=11,
+                 bbox={"facecolor": "orange", "alpha": 0.9, "pad": 3}, verticalalignment='center')
+    ax_text.text(0.5, 0.3, param_details, ha="center", fontsize=11,
+                 bbox={"facecolor": "lightblue", "alpha": 0.9, "pad": 3}, verticalalignment='center')
+
+    # Adjust the layout
+    plt.tight_layout()
 
     # Saving the graph to a file with a timestamp
     current_time = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -105,4 +117,3 @@ def save_cost_graph(costs, filename, learning_rate, batch_norm, use_l2, epsilon,
 
     # Display the graph
     plt.show()
-

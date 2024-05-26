@@ -42,7 +42,7 @@ def linear_activation_backward(dA, cache, activation, use_l2=False, epsilon=1e-4
     return dA_prev, dW, db
 
 
-def L_model_backward(AL, Y, caches,use_l2=False,epsilon=1e-4):
+def L_model_backward(AL, Y, caches, use_l2=False, epsilon=1e-4):
     """
     Implement the backward propagation process for the entire network.
     """
@@ -51,25 +51,26 @@ def L_model_backward(AL, Y, caches,use_l2=False,epsilon=1e-4):
     Y = Y.reshape(AL.shape)  # after this line, Y is the same shape as AL
 
     # Initializing the backpropagation
-    # For softmax, we directly compute dAL from AL and Y (output of last layer)
+    # For softmax, we directly compute dAL from AL and Y (output of the last layer)
     dAL = - (Y / (AL + 1e-8)) + (1 - Y) / (1 - AL + 1e-8)
-
     grads["dA" + str(L)] = dAL
-    # Lth layer (softmax -> linear) gradients. Inputs: "AL, Y, caches".
 
-    for l in reversed(range(0, L)):
+    # Lth layer (softmax -> linear) gradients. Inputs: "AL, Y, caches".
+    current_cache = caches[L - 1]
+    grads["dA" + str(L - 1)], grads["dW" + str(L)], grads["db" + str(L)] = linear_activation_backward(
+        grads["dA" + str(L)], current_cache, "softmax", use_l2=use_l2, epsilon=epsilon)
+
+    # Loop from l=L-2 to l=0
+    for l in reversed(range(L - 1)):
         current_cache = caches[l]
-        # lth layer: (softmax -> Linear) gradients.
-        if l == L - 1:
-            grads["dA" + str(l)], grads["dW" + str(l + 1)], grads["db" + str(l + 1)] = linear_activation_backward(
-                grads["dA" + str(l + 1)], current_cache, "softmax",use_l2=use_l2,epsilon=epsilon)
         # lth layer: (Relu -> Linear) gradients.
-        else:
-            grads["dA" + str(l)], grads["dW" + str(l + 1)], grads["db" + str(l + 1)] = linear_activation_backward(
-                grads["dA" + str(l + 1)], current_cache, "relu",use_l2=use_l2,epsilon=epsilon)
+        dA_prev_temp, dW_temp, db_temp = linear_activation_backward(
+            grads["dA" + str(l + 1)], current_cache, "relu", use_l2=use_l2, epsilon=epsilon)
+        grads["dA" + str(l)] = dA_prev_temp
+        grads["dW" + str(l + 1)] = dW_temp
+        grads["db" + str(l + 1)] = db_temp
 
     return grads
-
 
 def update_parameters(parameters, grads, learning_rate):
     L = len(parameters) // 2  # number of layers in the neural network

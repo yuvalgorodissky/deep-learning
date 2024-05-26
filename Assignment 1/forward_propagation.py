@@ -8,7 +8,7 @@ def initialize_parameters(layer_dims):
     for l in range(1, L):
         # He initialization for weights: sqrt(2/prev_layer_size)
         parameters['W' + str(l)] = torch.randn(layer_dims[l], layer_dims[l - 1]) * torch.sqrt(
-            torch.tensor(2.0 / layer_dims[l - 1]))
+            tensor(2 / layer_dims[l - 1]))
         # Initialize biases to zero
         parameters['b' + str(l)] = torch.zeros(layer_dims[l], 1)
 
@@ -72,13 +72,12 @@ def L_model_forward(X, parameters, use_batchnorm):
 
 def compute_cost(AL, Y, parameters=None, epsilon=1e-4, use_l2=False):
     m = Y.size()[0]
-    cost = -torch.sum(Y * torch.log(AL+1e-8)) / m
+    cost = -torch.sum(Y * torch.log(AL + 1e-8)) / m
     if use_l2:
         L2_cost = 0
         for key in parameters:
-            if key[0] == 'W':
+            if 'W' in key:
                 L2_cost += torch.sum(parameters[key] ** 2)
-        L2_cost = (epsilon / 2) * L2_cost
+        L2_cost = (epsilon / 2) * L2_cost / m
         cost += L2_cost
-
     return cost

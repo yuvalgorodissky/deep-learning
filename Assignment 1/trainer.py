@@ -11,6 +11,8 @@ import matplotlib.pyplot as plt
 
 
 
+EPSILON = 1e-6
+
 def L_layer_model(train_dataloader, val_dataloader, layers_dims, learning_rate, num_iterations, batch_norm,
                   use_l2=False, epislon=1e-4):
     """
@@ -36,16 +38,18 @@ def L_layer_model(train_dataloader, val_dataloader, layers_dims, learning_rate, 
             step_num += 1
             if (step_num + 1) % 100 == 0:
                 step_loss = sum(costs) / 100
+
                 losses.append(step_loss)
                 costs = []
                 acc = Predict(val_dataloader, params, batch_norm)
                 acc_dev.append(acc)
                 pbar.set_description(f"Loss after step {step_num + 1}: {step_loss:.4f} | Dev accuracy: {acc:.4f}")
-                if len(acc_dev) > 2 and abs(acc_dev[-1] - acc_dev[-2]) < 1e-8 and abs(acc_dev[-2] - acc_dev[-3]) < 1e-8:
+                if len(acc_dev) > 2 and abs(acc_dev[-1] - acc_dev[-2]) < EPSILON and abs(acc_dev[-2] - acc_dev[-3]) < EPSILON:
                     print(f"Early stopping at epoch {i + 1}")
-                    return params, losses
+                    return params, losses ,i+1
 
-    return params, losses
+
+    return params, losses , num_iterations
 
 
 def Predict(test_dataloader, parameters, batch_norm):
@@ -70,7 +74,7 @@ def Predict(test_dataloader, parameters, batch_norm):
 
 
 def save_cost_graph(costs, filename, learning_rate, batch_norm, use_l2, epsilon, num_iterations, train_batch_size,
-                    test_batch_size, train_acc, dev_acc, test_acc):
+                    test_batch_size, train_acc, dev_acc, test_acc,run_time):
     """
     Saves a graph of the costs with the graph on the left and larger text boxes with reduced padding on the right.
     """
@@ -81,7 +85,7 @@ def save_cost_graph(costs, filename, learning_rate, batch_norm, use_l2, epsilon,
     ax = fig.add_subplot(gs[0])  # Adding the graph on the left part of the grid
 
     # Plotting the cost
-    ax.set_xlabel('Steps')
+    ax.set_xlabel('Steps(x100)')
     ax.set_ylabel('Cost')
     ax.plot(costs)
     ax.tick_params(axis='y')
@@ -96,9 +100,10 @@ def save_cost_graph(costs, filename, learning_rate, batch_norm, use_l2, epsilon,
         f"Batch Norm: {batch_norm}\n"
         f"Use L2 Regularization: {use_l2}\n"
         f"Epsilon: {epsilon}\n"
-        f"Iterations: {num_iterations}\n"
+        f"epochs: {num_iterations}\n"
         f"Train Batch Size: {train_batch_size}\n"
-        f"Test Batch Size: {test_batch_size}"
+        f"Test Batch Size: {test_batch_size}\n"
+        f"Run Time: {run_time}"
     )
     accuracy_details = f"Train Acc: {train_acc * 100:.2f}%,\nDev Acc: {dev_acc * 100:.2f}%,\nTest Acc: {test_acc * 100:.2f}%"
 
@@ -117,3 +122,9 @@ def save_cost_graph(costs, filename, learning_rate, batch_norm, use_l2, epsilon,
 
     # Display the graph
     plt.show()
+
+
+
+
+
+

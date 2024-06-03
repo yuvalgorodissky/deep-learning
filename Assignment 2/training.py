@@ -46,7 +46,7 @@ def train_siamese_network(model, train_dataloader, dev_dataloader, epochs, optim
                 writer.add_scalar('Dev loss', dev_loss, epoch)
                 print(f'dev Accuracy after epoch {epoch + 1}: {accuracy:.2f}%',
                       f'dev loss after epoch {epoch + 1}: {dev_loss:.2f}')
-                if len(dev_loss) > 1 and abs(dev_loss[-1] - dev_loss[-2]) < 0.0001:
+                if len(dev_losses) > 1 and abs(dev_loss[-1] - dev_loss[-2]) < 0.0001:
                     end_dt = datetime.datetime.now()
                     time_diff = end_dt - start_dt
                     total_time = f"{time_diff.seconds // 60:02d}:{time_diff.seconds % 60:02d}"

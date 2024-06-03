@@ -1,0 +1,2 @@
+Optimizer,Dropout,BatchNorm,BatchSize,Test Accuracy,Train Accuracy,Val Accuracy,Time
+Adam,0.2,True,32,51.4,53.466,49.773,00:29

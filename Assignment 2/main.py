@@ -1,7 +1,8 @@
 import torch
 from model import SiameseNetwork
 from training import train_siamese_network
-from utility import plot_losses, split_dataloader, calc_accuracy, export_result_dict, collect_samples_indices
+from utility import plot_losses, split_dataloader, calc_accuracy, export_result_dict, collect_samples_indices, \
+    save_samples_to_file
 from data_preprocessing import get_dataloader
 from torch.optim.lr_scheduler import StepLR
 
@@ -17,12 +18,10 @@ def main():
     batch_norms = [True, False]
     batch_sizes = [8, 32, 128]
 
-
     optimizers = ["Adam"]
     dropouts = [0.2]
     batch_norms = [True]
     batch_sizes = [32]
-
 
     results_dict = {}
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -59,14 +58,16 @@ def main():
                     val_labels, val_predictions = model.get_pred_labels(dev_dataloader, device)
                     val_accuracy = calc_accuracy(val_predictions, val_labels)
 
-                    print(f"Test accuracy: {test_accuracy:.2f}% after {20} epochs and {time}")
+                    print(f"Test accuracy: {test_accuracy:.2f}% time - {time}")
                     results_dict[(optimizer_name, dropout, batch_norm, batch_size)] = {"test_accuracy": test_accuracy,
                                                                                        "train_accuracy": train_accuracy,
                                                                                        "val_accuracy": val_accuracy,
                                                                                        "time": time}
-                    collect_samples_indices(test_dataloader,test_labels, test_predictions)
+                    sample_dict = collect_samples_indices(test_dataloader, test_predictions)
+                    save_samples_to_file(sample_dict)
 
     export_result_dict(results_dict)
+
 
 if __name__ == "__main__":
     main()

@@ -4,6 +4,7 @@ from PIL import Image
 import torchvision.transforms as transforms
 from torch.utils.data import Dataset, DataLoader
 
+
 def create_dataset(text_file, images_folder):
     pairs = []
     with open(text_file, 'r') as file:
@@ -22,6 +23,7 @@ def create_dataset(text_file, images_folder):
                 pairs.append((image_path1, image_path2, 1))
     return pairs
 
+
 class SiameseNetworkDataset(Dataset):
     def __init__(self, pairs, transform=None):
         self.pairs = pairs
@@ -39,14 +41,27 @@ class SiameseNetworkDataset(Dataset):
     def __len__(self):
         return len(self.pairs)
 
-def get_transforms():
+
+def get_transforms(is_train=True):
+    if is_train:
+        return transforms.Compose([
+            transforms.Resize((250, 250)),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.5], std=[0.5]),
+            transforms.RandomHorizontalFlip(),
+        ])
     return transforms.Compose([
         transforms.Resize((250, 250)),
         transforms.ToTensor(),
+        transforms.Normalize(mean=[0.5], std=[0.5]),
     ])
 
-def get_dataloader(text_file, images_folder, batch_size=32, shuffle=True):
+
+def get_dataloader(text_file, images_folder, batch_size=32, shuffle=True, is_train=True,use_augmentation=False):
     pairs = create_dataset(text_file, images_folder)
-    dataset = SiameseNetworkDataset(pairs, transform=get_transforms())
+    dataset = SiameseNetworkDataset(pairs, transform=get_transforms(is_train))
+    ## if use_augmentation is True, then we will add the augmentation to the dataset
+    if use_augmentation:
+        dataset = SiameseNetworkDataset(pairs, transform=get_transforms(is_train))
     return DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
 

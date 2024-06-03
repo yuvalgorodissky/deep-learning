@@ -1,10 +1,11 @@
 import torch
 from model import SiameseNetwork
 from training import train_siamese_network
-from utility import plot_losses, split_dataloader, calc_accuracy, export_result_dict, collect_samples_indices, \
-    save_samples_to_file
+from utility import plot_losses, split_dataloader, calc_accuracy, export_result_dict
+
 from data_preprocessing import get_dataloader
 from torch.optim.lr_scheduler import StepLR
+from evaluation import collect_samples_indices, save_samples_to_file, confusion_matrix
 
 
 def main():
@@ -18,10 +19,6 @@ def main():
     batch_norms = [True, False]
     batch_sizes = [8, 32, 128]
 
-    optimizers = ["Adam"]
-    dropouts = [0.2]
-    batch_norms = [True]
-    batch_sizes = [32]
 
     results_dict = {}
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -45,7 +42,7 @@ def main():
                     else:
                         optimizer = torch.optim.RMSprop(model.parameters(), lr=0.001, weight_decay=1e-5)
                     scheduler = StepLR(optimizer, step_size=10, gamma=0.1)
-                    model, time = train_siamese_network(model, train_dataloader, dev_dataloader, epochs=2,
+                    model, time = train_siamese_network(model, train_dataloader, dev_dataloader, epochs=50,
                                                         optimizer=optimizer,
                                                         scheduler=scheduler, device=device, writer_path=writer_path)
 
@@ -63,8 +60,9 @@ def main():
                                                                                        "train_accuracy": train_accuracy,
                                                                                        "val_accuracy": val_accuracy,
                                                                                        "time": time}
-                    sample_dict = collect_samples_indices(test_dataloader, test_predictions)
-                    save_samples_to_file(sample_dict)
+                    # sample_dict = collect_samples_indices(test_dataloader, test_predictions)
+                    # save_samples_to_file(sample_dict)
+                    # confusion_matrix(sample_dict)
 
     export_result_dict(results_dict)
 

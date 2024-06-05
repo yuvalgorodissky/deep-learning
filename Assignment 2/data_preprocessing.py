@@ -3,6 +3,7 @@ import torch
 from PIL import Image
 import torchvision.transforms as transforms
 from torch.utils.data import Dataset, DataLoader
+import random
 
 
 def create_dataset(text_file, images_folder):
@@ -42,26 +43,33 @@ class SiameseNetworkDataset(Dataset):
         return len(self.pairs)
 
 
-def get_transforms(is_train=True):
-    if is_train:
+def get_transforms(use_augmentation):
+    if use_augmentation:
+        return transforms.Compose([
+            transforms.Resize((250, 250)),  # Resize the image to 250x250
+            transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
+            transforms.RandomRotation(degrees=15),  # Random rotation between -15 to 15 degrees
+            transforms.RandomHorizontalFlip(),  # Random horizontal flip
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.5], std=[0.5]),
+        ])
+    else:
         return transforms.Compose([
             transforms.Resize((250, 250)),
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.5], std=[0.5]),
-            transforms.RandomHorizontalFlip(),
         ])
-    return transforms.Compose([
-        transforms.Resize((250, 250)),
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[0.5], std=[0.5]),
-    ])
 
-
-def get_dataloader(text_file, images_folder, batch_size=32, shuffle=True, is_train=True,use_augmentation=False):
+def get_dataloader(text_file, images_folder, batch_size=32, shuffle=True,use_augmentation=False,splits=0.9):
     pairs = create_dataset(text_file, images_folder)
-    dataset = SiameseNetworkDataset(pairs, transform=get_transforms(is_train))
-    ## if use_augmentation is True, then we will add the augmentation to the dataset
-    if use_augmentation:
-        dataset = SiameseNetworkDataset(pairs, transform=get_transforms(is_train))
+    random.shuffle(pairs)
+    if  use_augmentation:
+        train_pairs , val_pairs = pairs[:int(len(pairs)*splits)], pairs[int(len(pairs)*splits):]
+        for i in range(10):
+            train_pairs.extend(train_pairs)
+        train_dataset = SiameseNetworkDataset(train_pairs, transform=get_transforms(use_augmentation))
+        val_dataset = SiameseNetworkDataset(val_pairs, transform=get_transforms(use_augmentation))
+        return DataLoader(train_dataset, batch_size=batch_size, shuffle=shuffle), DataLoader(val_dataset, batch_size=batch_size, shuffle=shuffle)
+    dataset = SiameseNetworkDataset(pairs, transform=get_transforms(use_augmentation))
     return DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
 

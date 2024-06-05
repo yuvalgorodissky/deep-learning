@@ -5,13 +5,13 @@ import datetime
 import csv
 
 
-def split_dataloader(dataloader, splits=0.8):
-    train_size = int(splits * len(dataloader.dataset))
-    test_size = len(dataloader.dataset) - train_size
-    train_dataset, test_dataset = torch.utils.data.random_split(dataloader.dataset, [train_size, test_size])
-    train_loader = DataLoader(train_dataset, batch_size=dataloader.batch_size)
-    test_loader = DataLoader(test_dataset, batch_size=dataloader.batch_size)
-    return train_loader, test_loader
+# def split_dataloader(dataloader, splits=0.8):
+#     train_size = int(splits * len(dataloader.dataset))
+#     test_size = len(dataloader.dataset) - train_size
+#     train_dataset, test_dataset = torch.utils.data.random_split(dataloader.dataset, [train_size, test_size])
+#     train_loader = DataLoader(train_dataset, batch_size=dataloader.batch_size)
+#     test_loader = DataLoader(test_dataset, batch_size=dataloader.batch_size)
+#     return train_loader, test_loader
 
 
 def plot_losses(losses, path):
@@ -31,6 +31,11 @@ def calc_accuracy(labels, preds):
 
 
 def export_result_dict(result_dict):
+    # export dict like results_dict[(optimizer_name, dropout, batch_norm, batch_size, loss_fn_name, use_augmentation)] = {
+    #     "test_accuracy": test_accuracy,
+    #     "train_accuracy": train_accuracy,
+    #     "val_accuracy": val_accuracy,
+    #     "time": time}
     # Format the current date and time as a string that is safe for filenames
     now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
@@ -43,21 +48,17 @@ def export_result_dict(result_dict):
         writer = csv.writer(f)
 
         # Write the header row
-        headers = ['Optimizer', 'Dropout', 'BatchNorm', 'BatchSize', 'Test Accuracy', 'Train Accuracy', 'Val Accuracy',
-                   'Time']
+        headers = ['Optimizer', 'Dropout', 'BatchNorm', 'BatchSize', 'loss_fn_name', 'use_augmentation', 'TestAccuracy',
+                   'TrainAccuracy', 'ValAccuracy', 'Time']
         writer.writerow(headers)
 
         # Write data rows
         for key, value in result_dict.items():
-            optimizer_name, dropout, batch_norm, batch_size = key
-            test_accuracy = round(value['test_accuracy'], 3)
-            train_accuracy = round(value['train_accuracy'], 3)
-            val_accuracy = round(value['val_accuracy'], 3)
-            time = value['time']
-            row = [optimizer_name, dropout, batch_norm, batch_size, test_accuracy, train_accuracy, val_accuracy, time]
+            optimizer_name, dropout, batch_norm, batch_size, loss_fn_name, use_augmentation = key
+            test_accuracy = round(value["test_accuracy"],3)
+            train_accuracy = round(value["train_accuracy"],3)
+            val_accuracy =round(value["val_accuracy"],3)
+            time = value["time"]
+            row = [optimizer_name, dropout, batch_norm, batch_size, loss_fn_name, use_augmentation, test_accuracy,
+                   train_accuracy, val_accuracy, time]
             writer.writerow(row)
-
-
-
-
-

@@ -18,29 +18,27 @@ def train_siamese_network(model, train_dataloader, dev_dataloader, epochs, loss_
     writer = SummaryWriter(writer_path)  # Initialize TensorBoard writer
     dev_losses = []
     print(f"Training on device: {device}")
-
     model.train()
     for epoch in range(epochs):
         total_loss = 0
-        print("epoch: ", epoch)
-        for i, (images, labels) in enumerate(train_dataloader):
-            img1, img2, labels = images[0].to(device), images[1].to(device), labels.to(device)
-            optimizer.zero_grad()
-            output = model(img1, img2)
-            loss = loss_fn(output, labels.unsqueeze(1).float())
-            loss.backward()
-            optimizer.step()
+        with tqdm(train_dataloader, desc=f"Epoch {epoch + 1}/{epochs}", unit="batch") as tepoch:
+            for i, (images, labels) in enumerate(tepoch):
+                img1, img2, labels = images[0].to(device), images[1].to(device), labels.to(device)
+                optimizer.zero_grad()
+                output = model(img1, img2)
+                loss = loss_fn(output, labels.unsqueeze(1).float())
+                loss.backward()
+                optimizer.step()
 
-            total_loss += loss.item()
-            # writer.add_scalar('Training loss', loss.item(), epoch * len(train_dataloader) + i)  # Log loss
-            # print(f'Epoch {epoch + 1}/{epochs}, Batch {i + 1}/{len(train_dataloader)}, Loss: {loss.item()}')
+                total_loss += loss.item()
+                tepoch.set_description(f"Epoch {epoch + 1}/{epochs} Loss: {loss.item():.4f}")
+                tepoch.refresh()  # to update the description on the last iteration
+                # Optionally log the batch loss
+                writer.add_scalar('Training loss', loss.item(), epoch * len(train_dataloader) + i)
 
-
-
-        scheduler.step()
         avg_loss = total_loss / len(train_dataloader)
-        print(f'Epoch {epoch + 1}/{epochs}, Average Loss: {avg_loss}')
-        writer.add_scalar('Average Training loss', avg_loss, epoch)  # Log average training loss
+        print(f"Epoch {epoch + 1}/{epochs}, Average Loss: {avg_loss:.4f}")
+        scheduler.step()
         if (epoch + 1) % 2 == 0:
             model.eval()
             with torch.no_grad():
@@ -62,7 +60,6 @@ def train_siamese_network(model, train_dataloader, dev_dataloader, epochs, loss_
                     print(f'Early stopping after epoch {epoch + 1}')
                     return model, total_time
             model.train()
-
 
     end_dt = datetime.datetime.now()
     time_diff = end_dt - start_dt

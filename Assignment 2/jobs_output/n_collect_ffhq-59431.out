@@ -4,3 +4,658 @@ SLURM_JOBID:		 59431
 SLURM_JOB_NODELIST:	 ise-6000-01 
 
 
+Number of models: 48
+|| Running model number 1/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: True, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.7508253572203897
+Epoch 2/10, Average Loss: 0.6471906836616873
+Epoch 3/10, Average Loss: 0.5728200833123139
+Epoch 4/10, Average Loss: 0.4584335515023482
+Epoch 5/10, Average Loss: 0.36080612324855543
+Epoch 6/10, Average Loss: 0.27749568652248746
+Epoch 7/10, Average Loss: 0.22840502847625752
+Epoch 8/10, Average Loss: 0.19074672786613003
+Epoch 9/10, Average Loss: 0.1672263577928522
+Epoch 10/10, Average Loss: 0.14791308714594278
+Test accuracy: 72.50% time - 56:53
+|| Running model number 2/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: True, batch_size: 8, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.5024316444423984
+Epoch 2/10, Average Loss: 0.5035353535353535
+Epoch 3/10, Average Loss: 0.5035353535353535
+Epoch 4/10, Average Loss: 0.5035353535353535
+Early stopping after epoch 4
+Test accuracy: 50.00% time - 22:23
+|| Running model number 3/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: True, batch_size: 32, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.6837964924067403
+Epoch 2/10, Average Loss: 0.5570479222665118
+Epoch 3/10, Average Loss: 0.4273550116091437
+Epoch 4/10, Average Loss: 0.3094963203146693
+Epoch 5/10, Average Loss: 0.22086532949582827
+Epoch 6/10, Average Loss: 0.1669802339040405
+Epoch 7/10, Average Loss: 0.13043718276506286
+Epoch 8/10, Average Loss: 0.11004946346549688
+Epoch 9/10, Average Loss: 0.08877794753296694
+Epoch 10/10, Average Loss: 0.06847224850508479
+Test accuracy: 70.00% time - 29:32
+|| Running model number 4/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: True, batch_size: 32, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.24307182009944237
+Epoch 2/10, Average Loss: 0.19311392567269445
+Epoch 3/10, Average Loss: 0.15502179745037067
+Epoch 4/10, Average Loss: 0.11840987206107195
+Epoch 5/10, Average Loss: 0.09106792840558993
+Epoch 6/10, Average Loss: 0.07028518890381244
+Epoch 7/10, Average Loss: 0.054344429333599495
+Epoch 8/10, Average Loss: 0.03931545319565254
+Epoch 9/10, Average Loss: 0.03524660218359604
+Epoch 10/10, Average Loss: 0.028481838615725542
+Test accuracy: 74.50% time - 29:19
+|| Running model number 5/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: True, batch_size: 128, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.704851572744308
+Epoch 2/10, Average Loss: 0.5951235259732892
+Epoch 3/10, Average Loss: 0.4611701415431115
+Epoch 4/10, Average Loss: 0.32445652273393444
+Epoch 5/10, Average Loss: 0.2069532508811643
+Epoch 6/10, Average Loss: 0.1398534226321405
+Epoch 7/10, Average Loss: 0.09640758739363763
+Epoch 8/10, Average Loss: 0.07141198777864056
+Epoch 9/10, Average Loss: 0.061975642461930554
+Epoch 10/10, Average Loss: 0.05950579708141665
+Test accuracy: 66.80% time - 22:39
+|| Running model number 6/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: True, batch_size: 128, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.2369229729137113
+Epoch 2/10, Average Loss: 0.17928991971477384
+Epoch 3/10, Average Loss: 0.1319515784421275
+Epoch 4/10, Average Loss: 0.09210022505252592
+Epoch 5/10, Average Loss: 0.059587942640627584
+Epoch 6/10, Average Loss: 0.044649193279685515
+Early stopping after epoch 6
+Test accuracy: 71.90% time - 13:42
+|| Running model number 7/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: False, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.7879252622163657
+Epoch 2/10, Average Loss: 0.7805862688777423
+Epoch 3/10, Average Loss: 0.7626976855234666
+Epoch 4/10, Average Loss: 0.7897747975527638
+Epoch 5/10, Average Loss: 0.7898881201220281
+Epoch 6/10, Average Loss: 0.785712375002678
+Epoch 7/10, Average Loss: 0.7791380609075228
+Epoch 8/10, Average Loss: 0.7629921766302802
+Epoch 9/10, Average Loss: 0.7629721685130186
+Epoch 10/10, Average Loss: 0.7522523275950942
+Test accuracy: 56.40% time - 54:23
+|| Running model number 8/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: False, batch_size: 8, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.37327857921843677
+Epoch 2/10, Average Loss: 0.49115710273914
+Epoch 3/10, Average Loss: 0.49312763162644235
+Epoch 4/10, Average Loss: 0.5005050505050505
+Epoch 5/10, Average Loss: 0.5005049459440539
+Epoch 6/10, Average Loss: 0.5004930909173657
+Early stopping after epoch 6
+Test accuracy: 50.00% time - 32:46
+|| Running model number 9/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: False, batch_size: 32, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.7371442760905079
+Epoch 2/10, Average Loss: 0.7167409098013537
+Epoch 3/10, Average Loss: 0.7276194509666455
+Epoch 4/10, Average Loss: 0.7341430022566307
+Epoch 5/10, Average Loss: 0.7351549148366987
+Epoch 6/10, Average Loss: 0.7106887681803912
+Epoch 7/10, Average Loss: 0.7108688736770765
+Epoch 8/10, Average Loss: 0.733249557326414
+Epoch 9/10, Average Loss: 0.7249127420354544
+Epoch 10/10, Average Loss: 0.7171622767009335
+Early stopping after epoch 10
+Test accuracy: 57.30% time - 27:33
+|| Running model number 10/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: False, batch_size: 32, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.27095113747628324
+Epoch 2/10, Average Loss: 0.26565390235484126
+Epoch 3/10, Average Loss: 0.265433431177224
+Epoch 4/10, Average Loss: 0.2654319861016096
+Epoch 5/10, Average Loss: 0.2667487186886767
+Epoch 6/10, Average Loss: 0.26378498287790236
+Epoch 7/10, Average Loss: 0.26089011310857024
+Epoch 8/10, Average Loss: 0.26208470417532664
+Epoch 9/10, Average Loss: 0.2644523644100676
+Epoch 10/10, Average Loss: 0.2584374945893619
+Test accuracy: 60.60% time - 27:18
+|| Running model number 11/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: False, batch_size: 128, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.7334559694413216
+Epoch 2/10, Average Loss: 0.692937942089573
+Epoch 3/10, Average Loss: 0.6573264856492319
+Epoch 4/10, Average Loss: 0.5948901549462349
+Epoch 5/10, Average Loss: 0.5346635437780811
+Epoch 6/10, Average Loss: 0.4619272360878606
+Epoch 7/10, Average Loss: 0.3848523711004565
+Epoch 8/10, Average Loss: 0.30469452623398074
+Epoch 9/10, Average Loss: 0.23408360269761855
+Epoch 10/10, Average Loss: 0.17559700483275997
+Test accuracy: 67.60% time - 20:21
+|| Running model number 12/48  || 
+optimizer: Adam, dropout: 0.2, batch_norm: False, batch_size: 128, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.2622894848546674
+Epoch 2/10, Average Loss: 0.2592409070461027
+Epoch 3/10, Average Loss: 0.2554463561504118
+Epoch 4/10, Average Loss: 0.25484642703686994
+Epoch 5/10, Average Loss: 0.2558588621116454
+Epoch 6/10, Average Loss: 0.25412915397074914
+Epoch 7/10, Average Loss: 0.26262981583995204
+Epoch 8/10, Average Loss: 0.25475669060983963
+Epoch 9/10, Average Loss: 0.25749589406674905
+Epoch 10/10, Average Loss: 0.25622580032194814
+Test accuracy: 52.70% time - 20:05
+|| Running model number 13/48  || 
+optimizer: Adam, dropout: 0, batch_norm: True, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.7115676141748525
+Epoch 2/10, Average Loss: 0.5981484369497106
+Epoch 3/10, Average Loss: 0.46597957954563274
+Epoch 4/10, Average Loss: 0.325858489923706
+Epoch 5/10, Average Loss: 0.23228629445788837
+Epoch 6/10, Average Loss: 0.1622456003669085
+Epoch 7/10, Average Loss: 0.14034021898473828
+Epoch 8/10, Average Loss: 0.11103366054001856
+Epoch 9/10, Average Loss: 0.10021093784739743
+Epoch 10/10, Average Loss: 0.08927280866973704
+Test accuracy: 78.50% time - 56:15
+|| Running model number 14/48  || 
+optimizer: Adam, dropout: 0, batch_norm: True, batch_size: 8, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.49487805742211693
+Epoch 2/10, Average Loss: 0.503030303030303
+Epoch 3/10, Average Loss: 0.503030303030303
+Epoch 4/10, Average Loss: 0.503030303030303
+Early stopping after epoch 4
+Test accuracy: 50.00% time - 22:21
+|| Running model number 15/48  || 
+optimizer: Adam, dropout: 0, batch_norm: True, batch_size: 32, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.6762845595164138
+Epoch 2/10, Average Loss: 0.5295042155825072
+Epoch 3/10, Average Loss: 0.32989060269707815
+Epoch 4/10, Average Loss: 0.19126905496074234
+Epoch 5/10, Average Loss: 0.12079753251279883
+Epoch 6/10, Average Loss: 0.0846971122093607
+Epoch 7/10, Average Loss: 0.06810887538119308
+Epoch 8/10, Average Loss: 0.04915097171082635
+Epoch 9/10, Average Loss: 0.041250926993865525
+Epoch 10/10, Average Loss: 0.037726740258022154
+Test accuracy: 73.90% time - 30:14
+|| Running model number 16/48  || 
+optimizer: Adam, dropout: 0, batch_norm: True, batch_size: 32, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.2331525562797494
+Epoch 2/10, Average Loss: 0.1592694544301087
+Epoch 3/10, Average Loss: 0.10655607935492557
+Epoch 4/10, Average Loss: 0.07936895187637244
+Epoch 5/10, Average Loss: 0.05546422284818668
+Epoch 6/10, Average Loss: 0.03816261758534343
+Epoch 7/10, Average Loss: 0.027112605446657716
+Epoch 8/10, Average Loss: 0.022826508864134502
+Epoch 9/10, Average Loss: 0.01824905436037647
+Epoch 10/10, Average Loss: 0.01447598095580797
+Test accuracy: 76.70% time - 30:07
+|| Running model number 17/48  || 
+optimizer: Adam, dropout: 0, batch_norm: True, batch_size: 128, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.6059068766332442
+Epoch 2/10, Average Loss: 0.37873769883186587
+Epoch 3/10, Average Loss: 0.18937369907094587
+Epoch 4/10, Average Loss: 0.08539952606924119
+Epoch 5/10, Average Loss: 0.050161239120268056
+Epoch 6/10, Average Loss: 0.044822302364533946
+Epoch 7/10, Average Loss: 0.04185952218549867
+Epoch 8/10, Average Loss: 0.030889505832906693
+Epoch 9/10, Average Loss: 0.02688180535070358
+Epoch 10/10, Average Loss: 0.03550531560134503
+Test accuracy: 73.90% time - 23:38
+|| Running model number 18/48  || 
+optimizer: Adam, dropout: 0, batch_norm: True, batch_size: 128, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.22428580445628013
+Epoch 2/10, Average Loss: 0.13993796513926599
+Epoch 3/10, Average Loss: 0.07793899238590271
+Epoch 4/10, Average Loss: 0.04093875445185169
+Epoch 5/10, Average Loss: 0.030985741749886542
+Epoch 6/10, Average Loss: 0.0244348683724961
+Epoch 7/10, Average Loss: 0.021086129438011875
+Epoch 8/10, Average Loss: 0.01787566529406655
+Epoch 9/10, Average Loss: 0.017074767277846414
+Epoch 10/10, Average Loss: 0.016658681135384306
+Test accuracy: 74.00% time - 22:31
+|| Running model number 19/48  || 
+optimizer: Adam, dropout: 0, batch_norm: False, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.7693418495281779
+Epoch 2/10, Average Loss: 0.7729321043960976
+Epoch 3/10, Average Loss: 0.7713267972613826
+Epoch 4/10, Average Loss: 0.7661271163791117
+Epoch 5/10, Average Loss: 0.7517536468879141
+Epoch 6/10, Average Loss: 0.7618715056265244
+Epoch 7/10, Average Loss: 0.756310797411986
+Epoch 8/10, Average Loss: 0.743247846967042
+Epoch 9/10, Average Loss: 0.7544435705289696
+Epoch 10/10, Average Loss: 0.7571343975777578
+Test accuracy: 52.60% time - 54:37
+|| Running model number 20/48  || 
+optimizer: Adam, dropout: 0, batch_norm: False, batch_size: 8, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.48892015551051465
+Epoch 2/10, Average Loss: 0.49646464646464644
+Epoch 3/10, Average Loss: 0.49646464646464644
+Epoch 4/10, Average Loss: 0.4964646064633071
+Early stopping after epoch 4
+Test accuracy: 50.00% time - 21:45
+|| Running model number 21/48  || 
+optimizer: Adam, dropout: 0, batch_norm: False, batch_size: 32, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.717784403936158
+Epoch 2/10, Average Loss: 0.7251562630225076
+Epoch 3/10, Average Loss: 0.7233855640560822
+Epoch 4/10, Average Loss: 0.7142767554723773
+Epoch 5/10, Average Loss: 0.7192682773115562
+Epoch 6/10, Average Loss: 0.7152187593148868
+Epoch 7/10, Average Loss: 0.7315147747323278
+Epoch 8/10, Average Loss: 0.7289459841124268
+Epoch 9/10, Average Loss: 0.7327911825865652
+Epoch 10/10, Average Loss: 0.7090599076620789
+Test accuracy: 53.60% time - 27:13
+|| Running model number 22/48  || 
+optimizer: Adam, dropout: 0, batch_norm: False, batch_size: 32, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.2677789260189445
+Epoch 2/10, Average Loss: 0.2678837674114739
+Epoch 3/10, Average Loss: 0.26372670655489355
+Epoch 4/10, Average Loss: 0.2608281203541116
+Epoch 5/10, Average Loss: 0.25900076683580586
+Epoch 6/10, Average Loss: 0.2535672324539579
+Epoch 7/10, Average Loss: 0.25064246772949456
+Epoch 8/10, Average Loss: 0.2519238438571597
+Epoch 9/10, Average Loss: 0.2423281417332096
+Epoch 10/10, Average Loss: 0.2466756782595291
+Test accuracy: 63.30% time - 27:11
+|| Running model number 23/48  || 
+optimizer: Adam, dropout: 0, batch_norm: False, batch_size: 128, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.6579477721644986
+Epoch 2/10, Average Loss: 0.5506188900240006
+Epoch 3/10, Average Loss: 0.42623406321771684
+Epoch 4/10, Average Loss: 0.2612064581724905
+Epoch 5/10, Average Loss: 0.12876857576831693
+Epoch 6/10, Average Loss: 0.057477193493996895
+Epoch 7/10, Average Loss: 0.028694957398599195
+Epoch 8/10, Average Loss: 0.01619382742792368
+Epoch 9/10, Average Loss: 0.010132241723758558
+Epoch 10/10, Average Loss: 0.009406595917478685
+Test accuracy: 77.00% time - 20:12
+|| Running model number 24/48  || 
+optimizer: Adam, dropout: 0, batch_norm: False, batch_size: 128, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.23402462447843245
+Epoch 2/10, Average Loss: 0.16434428638988927
+Epoch 3/10, Average Loss: 0.088488126089496
+Epoch 4/10, Average Loss: 0.03016771094933633
+Epoch 5/10, Average Loss: 0.011499799334353978
+Epoch 6/10, Average Loss: 0.0067433580786230105
+Epoch 7/10, Average Loss: 0.00501010759673532
+Epoch 8/10, Average Loss: 0.005080334606370138
+Epoch 9/10, Average Loss: 0.006219425109485465
+Epoch 10/10, Average Loss: 0.00595709977581376
+Test accuracy: 78.00% time - 19:59
+|| Running model number 25/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: True, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 28.938882752789393
+Epoch 2/10, Average Loss: 0.8612205693637481
+Epoch 3/10, Average Loss: 0.8119419550293624
+Epoch 4/10, Average Loss: 0.7471600876793717
+Epoch 5/10, Average Loss: 0.6842399082837081
+Epoch 6/10, Average Loss: 0.6088748901239549
+Epoch 7/10, Average Loss: 0.5415578041850316
+Epoch 8/10, Average Loss: 0.4770842635134856
+Epoch 9/10, Average Loss: 0.4072828192384255
+Epoch 10/10, Average Loss: 0.369967610060115
+Test accuracy: 73.90% time - 50:25
+|| Running model number 26/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: True, batch_size: 8, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.49979865442321814
+Epoch 2/10, Average Loss: 0.4985555876806533
+Epoch 3/10, Average Loss: 0.5006672153569237
+Epoch 4/10, Average Loss: 0.49811753822095467
+Epoch 5/10, Average Loss: 0.5004154386845518
+Epoch 6/10, Average Loss: 0.4997235201645379
+Epoch 7/10, Average Loss: 0.506158725842116
+Epoch 8/10, Average Loss: 0.5022548385822413
+Epoch 9/10, Average Loss: 0.4969762025458149
+Epoch 10/10, Average Loss: 0.5001651800461537
+Early stopping after epoch 10
+Test accuracy: 50.00% time - 49:43
+|| Running model number 27/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: True, batch_size: 32, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 50.27058870746169
+Epoch 2/10, Average Loss: 50.353392568659125
+Epoch 3/10, Average Loss: 15.578775577283253
+Epoch 4/10, Average Loss: 0.8262308711766811
+Epoch 5/10, Average Loss: 0.7821538861425705
+Epoch 6/10, Average Loss: 0.7102399339390879
+Epoch 7/10, Average Loss: 0.6513294585783378
+Epoch 8/10, Average Loss: 0.5709137081714747
+Epoch 9/10, Average Loss: 0.4569828320348783
+Epoch 10/10, Average Loss: 0.35783797731210804
+Test accuracy: 67.30% time - 27:49
+|| Running model number 28/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: True, batch_size: 32, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.5013649482430472
+Epoch 2/10, Average Loss: 0.5014977109451478
+Epoch 3/10, Average Loss: 0.49747059714524544
+Epoch 4/10, Average Loss: 0.49718423695672115
+Epoch 5/10, Average Loss: 0.5004492225621937
+Epoch 6/10, Average Loss: 0.4985359450726979
+Epoch 7/10, Average Loss: 0.5029599200061526
+Epoch 8/10, Average Loss: 0.5015313678296202
+Epoch 9/10, Average Loss: 0.4991598723393072
+Epoch 10/10, Average Loss: 0.5014640467424962
+Early stopping after epoch 10
+Test accuracy: 50.00% time - 27:51
+|| Running model number 29/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: True, batch_size: 128, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 49.80424673788009
+Epoch 2/10, Average Loss: 50.158082851286856
+Epoch 3/10, Average Loss: 50.158082851286856
+Epoch 4/10, Average Loss: 50.16266496719852
+Epoch 5/10, Average Loss: 50.15120967741935
+Epoch 6/10, Average Loss: 50.1443365281628
+Epoch 7/10, Average Loss: 50.14662758611863
+Epoch 8/10, Average Loss: 41.462170953904426
+Epoch 9/10, Average Loss: 0.8366939456232132
+Epoch 10/10, Average Loss: 0.8138478313722918
+Test accuracy: 50.00% time - 22:11
+|| Running model number 30/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: True, batch_size: 128, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.4982628110916384
+Epoch 2/10, Average Loss: 0.49997708951273273
+Epoch 3/10, Average Loss: 0.4999312683459251
+Epoch 4/10, Average Loss: 0.49995417902546546
+Epoch 5/10, Average Loss: 0.4998625366918502
+Epoch 6/10, Average Loss: 0.4977938057914857
+Epoch 7/10, Average Loss: 0.5000229104872673
+Epoch 8/10, Average Loss: 0.5002520161290323
+Epoch 9/10, Average Loss: 0.5000916423336152
+Epoch 10/10, Average Loss: 0.49995417902546546
+Test accuracy: 50.00% time - 22:29
+|| Running model number 31/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: False, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.9994699595040745
+Epoch 2/10, Average Loss: 0.9350561037027475
+Epoch 3/10, Average Loss: 0.9252626095456307
+Epoch 4/10, Average Loss: 0.9105847050114112
+Epoch 5/10, Average Loss: 0.8950792990790473
+Epoch 6/10, Average Loss: 0.896476066764256
+Epoch 7/10, Average Loss: 0.882165907409155
+Epoch 8/10, Average Loss: 0.882082693974177
+Epoch 9/10, Average Loss: 0.8763378630262433
+Epoch 10/10, Average Loss: 0.8716968446834521
+Test accuracy: 50.00% time - 48:34
+|| Running model number 32/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: False, batch_size: 8, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.5027150995099262
+Epoch 2/10, Average Loss: 0.4952956326621952
+Epoch 3/10, Average Loss: 0.49364750390703027
+Epoch 4/10, Average Loss: 0.5034929462213709
+Epoch 5/10, Average Loss: 0.4950872438664496
+Epoch 6/10, Average Loss: 0.501653926679589
+Epoch 7/10, Average Loss: 0.4984402326381568
+Epoch 8/10, Average Loss: 0.500216197606289
+Epoch 9/10, Average Loss: 0.5010819952235077
+Epoch 10/10, Average Loss: 0.5007681191268595
+Test accuracy: 50.00% time - 48:18
+|| Running model number 33/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: False, batch_size: 32, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 49.46439045099527
+Epoch 2/10, Average Loss: 49.54732094981944
+Epoch 3/10, Average Loss: 7.461833952027877
+Epoch 4/10, Average Loss: 0.817546162447367
+Epoch 5/10, Average Loss: 0.8241344790466383
+Epoch 6/10, Average Loss: 0.8379074597012053
+Epoch 7/10, Average Loss: 0.8281263096652239
+Epoch 8/10, Average Loss: 0.8322688288180239
+Epoch 9/10, Average Loss: 0.8292307024626047
+Epoch 10/10, Average Loss: 0.8322226751794337
+Test accuracy: 50.00% time - 25:51
+|| Running model number 34/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: False, batch_size: 32, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.4968328197187291
+Epoch 2/10, Average Loss: 0.49695409263855805
+Epoch 3/10, Average Loss: 0.49993736716965287
+Epoch 4/10, Average Loss: 0.5030459074095879
+Epoch 5/10, Average Loss: 0.5047555829673669
+Epoch 6/10, Average Loss: 0.49697134112984376
+Epoch 7/10, Average Loss: 0.4970954548754099
+Epoch 8/10, Average Loss: 0.5020783096311165
+Epoch 9/10, Average Loss: 0.5055838406374844
+Epoch 10/10, Average Loss: 0.4969372644370515
+Test accuracy: 50.00% time - 25:51
+|| Running model number 35/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: False, batch_size: 128, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 49.81174177931201
+Epoch 2/10, Average Loss: 50.10997068343624
+Epoch 3/10, Average Loss: 50.08706012848885
+Epoch 4/10, Average Loss: 50.09393330235635
+Epoch 5/10, Average Loss: 50.09851539365707
+Epoch 6/10, Average Loss: 50.09851539365707
+Epoch 7/10, Average Loss: 50.10538856752457
+Epoch 8/10, Average Loss: 50.100806451612904
+Epoch 9/10, Average Loss: 8.421563463057241
+Epoch 10/10, Average Loss: 0.8117141508286999
+Test accuracy: 50.00% time - 20:16
+|| Running model number 36/48  || 
+optimizer: RMSprop, dropout: 0.2, batch_norm: False, batch_size: 128, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.49616643209611216
+Epoch 2/10, Average Loss: 0.4969987169388802
+Epoch 3/10, Average Loss: 0.49704453829796086
+Epoch 4/10, Average Loss: 0.4969528959643456
+Epoch 5/10, Average Loss: 0.49704453829796086
+Epoch 6/10, Average Loss: 0.49692998547707834
+Epoch 7/10, Average Loss: 0.4969070573006907
+Epoch 8/10, Average Loss: 0.5023915863806202
+Epoch 9/10, Average Loss: 0.4983968827032274
+Epoch 10/10, Average Loss: 0.49704453829796086
+Test accuracy: 50.00% time - 19:46
+|| Running model number 37/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: True, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.8612940242254373
+Epoch 2/10, Average Loss: 0.7153804476875247
+Epoch 3/10, Average Loss: 0.570852924609425
+Epoch 4/10, Average Loss: 0.4273604940160206
+Epoch 5/10, Average Loss: 0.3050719889473509
+Epoch 6/10, Average Loss: 0.23819373169443522
+Epoch 7/10, Average Loss: 0.1822820806858892
+Epoch 8/10, Average Loss: 0.15260723012358401
+Epoch 9/10, Average Loss: 0.12476459176798181
+Epoch 10/10, Average Loss: 0.11455955144874587
+Test accuracy: 78.20% time - 50:11
+|| Running model number 38/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: True, batch_size: 8, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.49427546312110593
+Epoch 2/10, Average Loss: 0.5000806927440142
+Epoch 3/10, Average Loss: 0.5000000961742017
+Epoch 4/10, Average Loss: 0.49689774741428194
+Epoch 5/10, Average Loss: 0.4984163278521917
+Epoch 6/10, Average Loss: 0.4965410965259629
+Epoch 7/10, Average Loss: 0.5015879797875282
+Epoch 8/10, Average Loss: 0.5003083601624074
+Epoch 9/10, Average Loss: 0.5022644196977519
+Epoch 10/10, Average Loss: 0.5010610307075761
+Test accuracy: 50.00% time - 49:41
+|| Running model number 39/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: True, batch_size: 32, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.8881419323661601
+Epoch 2/10, Average Loss: 0.6752038402106727
+Epoch 3/10, Average Loss: 0.4881597661047644
+Epoch 4/10, Average Loss: 0.30122392913492124
+Epoch 5/10, Average Loss: 0.18901444627919953
+Epoch 6/10, Average Loss: 0.1280826109014632
+Epoch 7/10, Average Loss: 0.089842881656798
+Epoch 8/10, Average Loss: 0.07949249093121397
+Epoch 9/10, Average Loss: 0.07034375780955655
+Epoch 10/10, Average Loss: 0.0550747259237137
+Test accuracy: 75.10% time - 27:44
+|| Running model number 40/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: True, batch_size: 32, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.4997563498374526
+Epoch 2/10, Average Loss: 0.495819896170704
+Epoch 3/10, Average Loss: 0.5000672174048925
+Epoch 4/10, Average Loss: 0.49873812364260867
+Epoch 5/10, Average Loss: 0.49835412288520947
+Epoch 6/10, Average Loss: 0.5031530087714434
+Epoch 7/10, Average Loss: 0.4997265978756937
+Epoch 8/10, Average Loss: 0.4994620508687369
+Epoch 9/10, Average Loss: 0.500033656499305
+Epoch 10/10, Average Loss: 0.4993010957714814
+Test accuracy: 50.00% time - 27:39
+|| Running model number 41/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: True, batch_size: 128, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 1.0986227485441393
+Epoch 2/10, Average Loss: 0.7415197376281984
+Epoch 3/10, Average Loss: 0.6110122103844919
+Epoch 4/10, Average Loss: 0.4970691205993775
+Epoch 5/10, Average Loss: 0.32296925321702036
+Epoch 6/10, Average Loss: 0.2147584579163982
+Epoch 7/10, Average Loss: 0.1764528205558177
+Epoch 8/10, Average Loss: 0.13684628041040514
+Epoch 9/10, Average Loss: 0.14824101254343985
+Epoch 10/10, Average Loss: 0.14345791834977364
+Test accuracy: 72.80% time - 22:13
+|| Running model number 42/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: True, batch_size: 128, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.489718605626014
+Epoch 2/10, Average Loss: 0.4914543621001705
+Epoch 3/10, Average Loss: 0.4915460044337857
+Epoch 4/10, Average Loss: 0.49138563063836865
+Epoch 5/10, Average Loss: 0.49143145161290325
+Epoch 6/10, Average Loss: 0.491568914921053
+Epoch 7/10, Average Loss: 0.4915917852232533
+Epoch 8/10, Average Loss: 0.49013038796763264
+Epoch 9/10, Average Loss: 0.49150018345925117
+Epoch 10/10, Average Loss: 0.4914772729719839
+Test accuracy: 50.00% time - 22:09
+|| Running model number 43/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: False, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 21.61327542654342
+Epoch 2/10, Average Loss: 0.8634594692771483
+Epoch 3/10, Average Loss: 0.8691711088834387
+Epoch 4/10, Average Loss: 0.8646819274210268
+Epoch 5/10, Average Loss: 0.8696142423152924
+Epoch 6/10, Average Loss: 0.8657908444964525
+Epoch 7/10, Average Loss: 0.8727342728051273
+Epoch 8/10, Average Loss: 0.8679978695376352
+Epoch 9/10, Average Loss: 0.8660311938310512
+Epoch 10/10, Average Loss: 0.8728617876587492
+Test accuracy: 50.00% time - 48:34
+|| Running model number 44/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: False, batch_size: 8, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.5010522943945847
+Epoch 2/10, Average Loss: 0.4984910873090378
+Epoch 3/10, Average Loss: 0.5030492556847709
+Epoch 4/10, Average Loss: 0.4957966484686341
+Epoch 5/10, Average Loss: 0.49594537414686474
+Epoch 6/10, Average Loss: 0.49792329713551686
+Epoch 7/10, Average Loss: 0.4970307156714552
+Epoch 8/10, Average Loss: 0.5036230555869174
+Epoch 9/10, Average Loss: 0.499542507953716
+Epoch 10/10, Average Loss: 0.4966877619275154
+Test accuracy: 50.00% time - 48:20
+|| Running model number 45/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: False, batch_size: 32, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 1.076653750339502
+Epoch 2/10, Average Loss: 0.9203965141045257
+Epoch 3/10, Average Loss: 0.9049682261870635
+Epoch 4/10, Average Loss: 0.9036859981655497
+Epoch 5/10, Average Loss: 0.8944571584414973
+Epoch 6/10, Average Loss: 0.8876756613589643
+Epoch 7/10, Average Loss: 0.8773228405750626
+Epoch 8/10, Average Loss: 0.8670715800394727
+Epoch 9/10, Average Loss: 0.9108835485717206
+Epoch 10/10, Average Loss: 0.9030407725898052
+Test accuracy: 50.00% time - 25:40
+|| Running model number 46/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: False, batch_size: 32, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.5022584259606332
+Epoch 2/10, Average Loss: 0.5053468724059751
+Epoch 3/10, Average Loss: 0.49755990851869103
+Epoch 4/10, Average Loss: 0.4974156079846938
+Epoch 5/10, Average Loss: 0.5025410608829319
+Epoch 6/10, Average Loss: 0.502336544443602
+Epoch 7/10, Average Loss: 0.5024737479806138
+Epoch 8/10, Average Loss: 0.502897998290994
+Epoch 9/10, Average Loss: 0.5003533104557983
+Epoch 10/10, Average Loss: 0.4945354644865135
+Test accuracy: 50.00% time - 25:40
+|| Running model number 47/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: False, batch_size: 128, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 49.30568794973435
+Epoch 2/10, Average Loss: 49.6173937151509
+Epoch 3/10, Average Loss: 49.58302787042433
+Epoch 4/10, Average Loss: 49.60364736741589
+Epoch 5/10, Average Loss: 38.54822766127125
+Epoch 6/10, Average Loss: 0.823030347593369
+Epoch 7/10, Average Loss: 0.8292794885173921
+Epoch 8/10, Average Loss: 0.8070313634410982
+Epoch 9/10, Average Loss: 0.82099719086001
+Epoch 10/10, Average Loss: 0.8199456134150105
+Test accuracy: 50.00% time - 19:23
+|| Running model number 48/48  || 
+optimizer: RMSprop, dropout: 0, batch_norm: False, batch_size: 128, loss_fn: mse_loss, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.49700360048201775
+Epoch 2/10, Average Loss: 0.49841917157173155
+Epoch 3/10, Average Loss: 0.49855663507215436
+Epoch 4/10, Average Loss: 0.4986711878930369
+Epoch 5/10, Average Loss: 0.49855659950164055
+Epoch 6/10, Average Loss: 0.5036684649605905
+Epoch 7/10, Average Loss: 0.49613906779596884
+Epoch 8/10, Average Loss: 0.4984420822512719
+Epoch 9/10, Average Loss: 0.4985108137130737
+Epoch 10/10, Average Loss: 0.4984878476588957
+Test accuracy: 50.00% time - 19:37

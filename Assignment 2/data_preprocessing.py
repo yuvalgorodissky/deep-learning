@@ -46,17 +46,17 @@ class SiameseNetworkDataset(Dataset):
 def get_transforms(use_augmentation):
     if use_augmentation:
         return transforms.Compose([
-            transforms.Resize((250, 250)),  # Resize the image to 250x250
+            transforms.Resize((105, 105)),  # Resize the image to 250x250
             transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
             transforms.RandomRotation(degrees=90),  # Random rotation up to 90 degrees
             transforms.RandomHorizontalFlip(),  # Random horizontal flip
-            transforms.RandomResizedCrop(250, scale=(0.6, 1.4), ratio=(1.0, 1.0)),  # Random zoom-in and zoom-out
+            transforms.RandomResizedCrop(105, scale=(0.6, 1.4), ratio=(1.0, 1.0)),  # Random zoom-in and zoom-out
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.5], std=[0.5]),
         ])
     else:
         return transforms.Compose([
-            transforms.Resize((250, 250)),
+            transforms.Resize((105, 105)),
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.5], std=[0.5]),
         ])

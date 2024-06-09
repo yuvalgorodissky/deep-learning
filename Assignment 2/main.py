@@ -12,30 +12,34 @@ import torch.nn.functional as F
 
 def main():
     # Path setup
-    images_path = "/sise/home/yuvalgor/deep-learning/Assignment 2/data/lfw2"
-    text_path = "/sise/home/yuvalgor/deep-learning/Assignment 2/data/pairsDevTrain.txt"
-    test_path = "/sise/home/yuvalgor/deep-learning/Assignment 2/data/pairsDevTest.txt"
-    exp_number=3
-    base_writer_path = f"/sise/home/yuvalgor/deep-learning/Assignment 2/runs/exp{exp_number}"
+    images_path = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/data/lfw2"
+    train_path = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/data/pairsDevTrain.txt"
+    test_path = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/data/pairsDevTest.txt"
+    exp_number=11
+    base_writer_path = f"/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/runs/exp{exp_number}"
     optimizers = ["Adam", "RMSprop"]
     dropouts = [0.2, 0]
     batch_norms = [True, False]
     batch_sizes = [8, 32, 128]
     loss_fns_names = ["binary_cross_entropy", "mse_loss"]
     loss_fns = [F.binary_cross_entropy, F.mse_loss]
-    use_augmentations = [True, False]
-    number_of_models = len(optimizers) * len(dropouts) * len(batch_norms) * len(batch_sizes) * len(loss_fns) * len(use_augmentations)
-    print(f"Number of models: {number_of_models}")
+    use_augmentations = [1,10]
+    # number_of_models = len(optimizers) * len(dropouts) * len(batch_norms) * len(batch_sizes) * len(loss_fns) * len(use_augmentations)
+    # print(f"Number of models: {number_of_models}")
 
 
-    #
-    #
-    # optimizers = ["Adam"]
-    # dropouts = [0.1]
-    # batch_norms = [True]
-    # batch_sizes = [32]
-    # loss_fns = [F.binary_cross_entropy]
-    epochs = 10
+    optimizers = ["Adam"]
+    dropouts = [0.2]
+    batch_norms = [True]
+    batch_sizes = [128]
+    loss_fns_names = ["binary_cross_entropy"]
+    loss_fns = [F.binary_cross_entropy]
+    use_augmentations = [10]
+    epochs = 30
+    number_of_models = len(optimizers) * len(dropouts) * len(batch_norms) * len(batch_sizes) * len(loss_fns) * len(
+        use_augmentations)
+
+
 
     results_dict = {}
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -47,11 +51,11 @@ def main():
                     for loss_fn_name , loss_fn in zip(loss_fns_names, loss_fns):
                         for use_augmentation in use_augmentations:
                             model_number+=1
-                            writer_path = f"{base_writer_path}/{optimizer_name}_{dropout}_{batch_norm}_{batch_size}"
+                            writer_path = f"{base_writer_path}/{optimizer_name}_{dropout}_{batch_norm}_{batch_size}_{loss_fn_name}_{use_augmentation}"
                             print(
                                 f"|| Running model number {model_number}/{number_of_models}  || \noptimizer: {optimizer_name}, dropout: {dropout}, batch_norm: {batch_norm}, batch_size: {batch_size}, loss_fn: {loss_fn_name}, use_augmentation: {use_augmentation}")
-                            train_dataloader, dev_dataloader = get_dataloader(text_path, images_path, batch_size=batch_size,use_augmentation=use_augmentation)
-                            test_dataloader = get_dataloader(test_path, images_path, batch_size=batch_size,use_augmentation=False)
+                            train_dataloader, dev_dataloader = get_dataloader(train_path, images_path, batch_size=batch_size,use_augmentation=use_augmentation)
+                            test_dataloader = get_dataloader(test_path, images_path, batch_size=batch_size,use_augmentation=0)
 
                             model = SiameseNetwork(dropout=dropout, batch_norm=batch_norm).to(device)
 

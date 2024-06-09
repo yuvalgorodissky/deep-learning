@@ -1,0 +1,29 @@
+date
+
+SLURM_JOBID:		 57462
+SLURM_JOB_NODELIST:	 ise-6000-01 
+
+
+Number of models: 96
+|| Running model number 1/96  || 
+optimizer: Adam, dropout: 0.2, batch_norm: True, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: True
+Training on device: cuda
+Epoch 1/10, Average Loss: 0.7206866080231137
+Epoch 2/10, Average Loss: 0.6384390106068717
+Epoch 3/10, Average Loss: 0.5450154652330611
+Epoch 4/10, Average Loss: 0.5042282888028357
+Epoch 5/10, Average Loss: 0.4077673555943701
+Epoch 6/10, Average Loss: 0.3265804456538624
+Epoch 7/10, Average Loss: 0.26835540711796946
+Epoch 8/10, Average Loss: 0.22772842419395845
+Epoch 9/10, Average Loss: 0.17843658948358562
+Epoch 10/10, Average Loss: 0.15437949349813992
+Test accuracy: 95.60% time - 25:19
+|| Running model number 2/96  || 
+optimizer: Adam, dropout: 0.2, batch_norm: True, batch_size: 8, loss_fn: binary_cross_entropy, use_augmentation: False
+Traceback (most recent call last):
+  File "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/main.py", line 91, in <module>
+    main()
+  File "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/main.py", line 53, in main
+    train_dataloader, dev_dataloader = get_dataloader(text_path, images_path, batch_size=batch_size,use_augmentation=use_augmentation)
+ValueError: too many values to unpack (expected 2)

@@ -48,8 +48,9 @@ def get_transforms(use_augmentation):
         return transforms.Compose([
             transforms.Resize((250, 250)),  # Resize the image to 250x250
             transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
-            transforms.RandomRotation(degrees=15),  # Random rotation between -15 to 15 degrees
+            transforms.RandomRotation(degrees=90),  # Random rotation up to 90 degrees
             transforms.RandomHorizontalFlip(),  # Random horizontal flip
+            transforms.RandomResizedCrop(250, scale=(0.6, 1.4), ratio=(1.0, 1.0)),  # Random zoom-in and zoom-out
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.5], std=[0.5]),
         ])
@@ -60,16 +61,20 @@ def get_transforms(use_augmentation):
             transforms.Normalize(mean=[0.5], std=[0.5]),
         ])
 
-def get_dataloader(text_file, images_folder, batch_size=32, shuffle=True,use_augmentation=False,splits=0.9):
+def get_dataloader(text_file, images_folder, batch_size=32, shuffle=True,use_augmentation=0,splits=0.9):
     pairs = create_dataset(text_file, images_folder)
     random.shuffle(pairs)
-    if  use_augmentation:
-        train_pairs , val_pairs = pairs[:int(len(pairs)*splits)], pairs[int(len(pairs)*splits):]
-        for i in range(10):
-            train_pairs.extend(train_pairs)
+    train_pairs = []
+    if  use_augmentation>0:
+        base_train_pairs , val_pairs = pairs[:int(len(pairs)*splits)], pairs[int(len(pairs)*splits):]
+        for i in range(use_augmentation):
+            train_pairs.extend(base_train_pairs)
         train_dataset = SiameseNetworkDataset(train_pairs, transform=get_transforms(use_augmentation))
         val_dataset = SiameseNetworkDataset(val_pairs, transform=get_transforms(use_augmentation))
         return DataLoader(train_dataset, batch_size=batch_size, shuffle=shuffle), DataLoader(val_dataset, batch_size=batch_size, shuffle=shuffle)
     dataset = SiameseNetworkDataset(pairs, transform=get_transforms(use_augmentation))
     return DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
+
+
+
 

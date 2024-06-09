@@ -1,5 +1,4 @@
 import datetime
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -23,6 +22,7 @@ def train_siamese_network(model, train_dataloader, dev_dataloader, epochs, loss_
     model.train()
     for epoch in range(epochs):
         total_loss = 0
+        print("epoch: ", epoch)
         for i, (images, labels) in enumerate(train_dataloader):
             img1, img2, labels = images[0].to(device), images[1].to(device), labels.to(device)
             optimizer.zero_grad()
@@ -32,7 +32,10 @@ def train_siamese_network(model, train_dataloader, dev_dataloader, epochs, loss_
             optimizer.step()
 
             total_loss += loss.item()
-            writer.add_scalar('Training loss', loss.item(), epoch * len(train_dataloader) + i)  # Log loss
+            # writer.add_scalar('Training loss', loss.item(), epoch * len(train_dataloader) + i)  # Log loss
+            # print(f'Epoch {epoch + 1}/{epochs}, Batch {i + 1}/{len(train_dataloader)}, Loss: {loss.item()}')
+
+
 
         scheduler.step()
         avg_loss = total_loss / len(train_dataloader)
@@ -59,6 +62,7 @@ def train_siamese_network(model, train_dataloader, dev_dataloader, epochs, loss_
                     print(f'Early stopping after epoch {epoch + 1}')
                     return model, total_time
             model.train()
+
 
     end_dt = datetime.datetime.now()
     time_diff = end_dt - start_dt

@@ -3,7 +3,7 @@ from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 import datetime
 import csv
-
+from data_preprocessing import get_transforms
 
 # def split_dataloader(dataloader, splits=0.8):
 #     train_size = int(splits * len(dataloader.dataset))
@@ -24,6 +24,7 @@ def plot_losses(losses, path):
     plt.title('Losses')
     plt.savefig(path + 'losses_' + str(now) + '.png')
     plt.show()
+
 
 
 def calc_accuracy(labels, preds):
@@ -62,3 +63,35 @@ def export_result_dict(result_dict):
             row = [optimizer_name, dropout, batch_norm, batch_size, loss_fn_name, use_augmentation, test_accuracy,
                    train_accuracy, val_accuracy, time]
             writer.writerow(row)
+
+
+
+from PIL import Image
+import numpy as np
+
+def image_transform(image, path):
+    transform = get_transforms(True)
+    fig, ax = plt.subplots(1, 2)
+    ax[0].imshow(np.array(image), cmap='gray' if image.mode == 'L' else None)
+    ax[0].set_title('Original Image')
+    ax[0].axis('off')
+
+    # Apply transformation
+    transformed_image = transform(image)
+
+    # Convert tensor back to numpy array for plotting
+    transformed_image = transformed_image.permute(1, 2, 0).numpy()
+    ax[1].imshow(transformed_image, cmap='gray' if image.mode == 'L' else None)
+    ax[1].set_title('Transformed Image')
+    ax[1].axis('off')
+    plt.savefig(path)
+
+def save_image(path_to_image, path_to_save):
+    # Open image in grayscale
+    image = Image.open(path_to_image).convert('L')
+    image_transform(image, path_to_save)
+
+#
+# path_to_image = '/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/data/lfw2/Aaron_Guiel/Aaron_Guiel_0001.jpg'
+# path_to_save = '/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/Aaron_Guiel_transformed.jpg'
+# save_image(path_to_image, path_to_save)

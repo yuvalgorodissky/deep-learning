@@ -34,7 +34,7 @@ class SiameseBaseNetwork(nn.Module):
         self.flatten = nn.Flatten()
         self.dropout4 = nn.Dropout(self.dropout)
 
-        self.fc1 = nn.Linear(6 * 6 * 256, 4096)  # Assuming the output size matches the flattened dimensions
+        self.fc1 = nn.Linear(24 * 24 * 256, 4096)  # Assuming the output size matches the flattened dimensions
         self.bn_fc1 = nn.BatchNorm1d(4096)
         self.dropout5 = nn.Dropout(self.dropout)
 

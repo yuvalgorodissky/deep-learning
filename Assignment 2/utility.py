@@ -87,7 +87,15 @@ def save_image(path_to_image, path_to_save):
     image = Image.open(path_to_image).convert('L')
     image_transform(image, path_to_save)
 
-#
+
+def save_model(model, path):
+    torch.save(model, path)
+
+
+def load_model(path):
+    ##load the model from the path saved in save_model function
+    model = torch.load(path)
+    return model
 # path_to_image = '/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/data/lfw2/Aaron_Guiel/Aaron_Guiel_0001.jpg'
 # path_to_save = '/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/Aaron_Guiel_transformed.jpg'
 # save_image(path_to_image, path_to_save)

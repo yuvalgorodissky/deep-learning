@@ -39,7 +39,7 @@ def train_siamese_network(model, train_dataloader, dev_dataloader, epochs, loss_
         avg_loss = total_loss / len(train_dataloader)
         print(f"Epoch {epoch + 1}/{epochs}, Average Loss: {avg_loss:.4f}")
         scheduler.step()
-        if (epoch + 1) % 2 == 0:
+        if (epoch + 1) % 150 == 0:
             model.eval()
             with torch.no_grad():
                 total_loss = 0

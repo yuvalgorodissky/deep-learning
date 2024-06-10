@@ -61,23 +61,19 @@ def get_transforms(use_augmentation):
             transforms.Normalize(mean=[0.5], std=[0.5]),
         ])
 
-def get_dataloader(text_file, images_folder, batch_size=32, shuffle=True,use_augmentation=0,splits=0.9):
+
+def get_dataloader(text_file, images_folder, batch_size=32, shuffle=True, use_augmentation=0, splits=0.9):
     pairs = create_dataset(text_file, images_folder)
     random.shuffle(pairs)
     train_pairs = []
-    if  use_augmentation>0:
-        base_train_pairs , val_pairs = pairs[:int(len(pairs)*splits)], pairs[int(len(pairs)*splits):]
+    if use_augmentation > 0:
+        base_train_pairs, val_pairs = pairs[:int(len(pairs) * splits)], pairs[int(len(pairs) * splits):]
         for i in range(use_augmentation):
             train_pairs.extend(base_train_pairs)
         train_dataset = SiameseNetworkDataset(train_pairs, transform=get_transforms(use_augmentation))
         val_dataset = SiameseNetworkDataset(val_pairs, transform=get_transforms(use_augmentation))
-        if len(val_dataset)==0:
-            print("No validation data found")
-            return DataLoader(train_dataset, batch_size=batch_size, shuffle=shuffle), []
-        return DataLoader(train_dataset, batch_size=batch_size, shuffle=shuffle), DataLoader(val_dataset, batch_size=batch_size, shuffle=shuffle)
+        return DataLoader(train_dataset, batch_size=batch_size, shuffle=shuffle), DataLoader(val_dataset,
+                                                                                             batch_size=batch_size,
+                                                                                             shuffle=shuffle)
     dataset = SiameseNetworkDataset(pairs, transform=get_transforms(use_augmentation))
     return DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
-
-
-
-

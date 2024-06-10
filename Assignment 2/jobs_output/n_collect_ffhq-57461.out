@@ -1,7 +1,0 @@
-date
-
-SLURM_JOBID:		 57461
-SLURM_JOB_NODELIST:	 ise-6000-01 
-
-
-slurmstepd: error: *** JOB 57461 ON ise-6000-01 CANCELLED AT 2024-06-07T11:09:37 ***

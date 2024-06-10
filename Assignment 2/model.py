@@ -94,5 +94,3 @@ class SiameseNetwork(nn.Module):
         all_predictions = torch.stack(all_predictions)
         all_labels = torch.stack(all_labels)
         return all_labels, all_predictions
-
-

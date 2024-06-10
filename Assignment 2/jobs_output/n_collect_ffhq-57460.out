@@ -1,7 +1,0 @@
-date
-
-SLURM_JOBID:		 57460
-SLURM_JOB_NODELIST:	 cs-4090-04 
-
-
-slurmstepd: error: *** JOB 57460 ON cs-4090-04 CANCELLED AT 2024-06-07T11:09:16 ***

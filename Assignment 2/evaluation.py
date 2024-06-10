@@ -2,7 +2,6 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-
 def collect_samples_indices(dataloader, preds):
     # Initialize the dictionary with categories of interest
     samples_dict = {
@@ -29,7 +28,6 @@ def collect_samples_indices(dataloader, preds):
     return samples_dict
 
 
-
 def save_samples_to_file(samples_dict):
     for key, value in samples_dict.items():
         # Use the first two pairs of samples if available
@@ -37,7 +35,8 @@ def save_samples_to_file(samples_dict):
 
         # Create a single figure with rows for the number of pairs and 2 columns
         if pairs_to_display:  # Check if there are pairs to display
-            fig, axs = plt.subplots(len(pairs_to_display), 2, figsize=(8, 4 * len(pairs_to_display)), gridspec_kw={'wspace': 0.05, 'hspace': 0.1})
+            fig, axs = plt.subplots(len(pairs_to_display), 2, figsize=(8, 4 * len(pairs_to_display)),
+                                    gridspec_kw={'wspace': 0.05, 'hspace': 0.1})
 
             # Configure the subplots to minimize spacing and remove axes
             for i, pair in enumerate(pairs_to_display):
@@ -56,7 +55,8 @@ def save_samples_to_file(samples_dict):
             plt.show()  # Display the figure
             plt.close()
 
-def confusion_matrix(samples_dict):
+
+def confusion_matrix(samples_dict, path_to_save):
     # Define labels for the categories
     categories = ['Positive', 'Negative']
     # Map the counts to the correct categories for a confusion matrix
@@ -64,7 +64,7 @@ def confusion_matrix(samples_dict):
         len(samples_dict['true_positive']),  # True Positive
         len(samples_dict['false_positive']),  # False Positive
         len(samples_dict['false_negative']),  # False Negative
-        len(samples_dict['true_negative'])    # True Negative
+        len(samples_dict['true_negative'])  # True Negative
     ]
     # Create a 2x2 confusion matrix
     confusion_mat = np.array(counts).reshape((2, 2))
@@ -86,6 +86,6 @@ def confusion_matrix(samples_dict):
 
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
-    plt.savefig('images/confusion_matrix.png')
+    plt.savefig(f'{path_to_save}/confusion_matrix.png')
     plt.show()
     plt.close()

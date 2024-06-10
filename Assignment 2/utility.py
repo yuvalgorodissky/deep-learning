@@ -5,15 +5,6 @@ import datetime
 import csv
 from data_preprocessing import get_transforms
 
-# def split_dataloader(dataloader, splits=0.8):
-#     train_size = int(splits * len(dataloader.dataset))
-#     test_size = len(dataloader.dataset) - train_size
-#     train_dataset, test_dataset = torch.utils.data.random_split(dataloader.dataset, [train_size, test_size])
-#     train_loader = DataLoader(train_dataset, batch_size=dataloader.batch_size)
-#     test_loader = DataLoader(test_dataset, batch_size=dataloader.batch_size)
-#     return train_loader, test_loader
-
-
 def plot_losses(losses, path):
     ##get the current time
     now = datetime.datetime.now()
@@ -96,6 +87,3 @@ def load_model(path):
     ##load the model from the path saved in save_model function
     model = torch.load(path)
     return model
-# path_to_image = '/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/data/lfw2/Aaron_Guiel/Aaron_Guiel_0001.jpg'
-# path_to_save = '/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/Aaron_Guiel_transformed.jpg'
-# save_image(path_to_image, path_to_save)

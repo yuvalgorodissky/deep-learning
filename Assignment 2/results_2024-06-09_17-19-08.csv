@@ -1,2 +1,0 @@
-Optimizer,Dropout,BatchNorm,BatchSize,loss_fn_name,use_augmentation,TestAccursqacy,TrainAccuracy,ValAccuracy,Time
-Adam,0.2,True,32,binary_cross_entropy,10,65.2,62.152,61.364,34:31

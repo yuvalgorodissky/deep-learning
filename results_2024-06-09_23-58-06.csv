@@ -1,4 +1,0 @@
-Optimizer,Epochs,Dropout,BatchNorm,BatchSize,loss_fn_name,use_augmentation,TestAccuracy,TrainAccuracy,ValAccuracy,Time
-Adam,30,0,True,128,binary_cross_entropy,10,72.0,82.98,66.818,31:54
-Adam,60,0,True,128,binary_cross_entropy,10,74.7,87.894,71.364,64:48
-Adam,100,0,True,128,binary_cross_entropy,10,73.5,84.929,65.0,107:22

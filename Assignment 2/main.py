@@ -17,19 +17,7 @@ def main():
     train_path = "data/pairsDevTrain.txt"
     test_path = "data/pairsDevTest.txt"
     exp_number = 11
-    # loaded_model=SiameseNetwork()
-    model_path = '/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 2/models/model_9.pt'
-    loaded_model = load_model(model_path)
-    test_dataloader = get_dataloader(test_path, images_path, batch_size=8, use_augmentation=0)
 
-    # Move the model to the appropriate device
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    loaded_model.to(device)
-    test_labels, test_predictions = loaded_model.get_pred_labels(test_dataloader, device)
-    samples_dict = collect_samples_indices(test_dataloader, test_predictions)
-    save_samples_to_file(samples_dict)
-
-    #
 
     base_writer_path = f"runs/exp{exp_number}"
     optimizers = ["Adam", "RMSprop"]
@@ -41,7 +29,7 @@ def main():
     use_augmentations = [1, 10]
     number_of_models = len(optimizers) * len(dropouts) * len(batch_norms) * len(batch_sizes) * len(loss_fns) * len(
         use_augmentations)
-    # print(f"Number of models: {number_of_models}")
+    print(f"Number of models: {number_of_models}")
 
     epochs = 50
     each_checkpoints = 5

@@ -31,4 +31,38 @@ source activate /dt/shabtaia/dt-sicpa/envs/diffusion_envs
 
 python_script='/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/src/main.py'
 
-python "$python_script"
+
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --midi_path) MIDI_PATH="$2"; shift ;;
+        --lyrics_path) LYRICS_PATH="$2"; shift ;;
+        --test_path) TEST_PATH="$2"; shift ;;
+        --model_save_path) MODEL_SAVE_PATH="$2"; shift ;;
+        --writer_path) WRITER_PATH="$2"; shift ;;
+        --num_layers) NUM_LAYERS="$2"; shift ;;
+        --learning_rate) LEARNING_RATE="$2"; shift ;;
+        --batch_size) BATCH_SIZE="$2"; shift ;;
+        --epochs) EPOCHS="$2"; shift ;;
+        --melody_strategy) MELODY_STRATEGY="$2"; shift ;;
+        --teacher_forcing) TEACHER_FORCING="$2"; shift ;;
+        *) echo "Unknown parameter passed: $1"; exit 1 ;;
+    esac
+    shift
+done
+
+echo
+
+# Run the Python script with the parsed arguments
+
+python "$python_script" \
+  --midi_path "$MIDI_PATH" \
+  --lyrics_path "$LYRICS_PATH" \
+  --test_path "$TEST_PATH" \
+  --model_save_path "$MODEL_SAVE_PATH" \
+  --writer_path "$WRITER_PATH" \
+  --num_layers $NUM_LAYERS \
+  --learning_rate $LEARNING_RATE \
+  --batch_size $BATCH_SIZE \
+  --epochs $EPOCHS \
+  --melody_strategy $MELODY_STRATEGY \
+  --teacher_forcing $TEACHER_FORCING

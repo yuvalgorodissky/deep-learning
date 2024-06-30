@@ -61,12 +61,13 @@ class lstm_encoder(nn.Module):
 class lstm_decoder(nn.Module):
     ''' Decodes hidden state output by encoder with dropout '''
 
-    def __init__(self, input_size, hidden_size,encoder_hidden_size, num_layers=1, dropout=0.5):
+    def __init__(self, input_size, decoder_hidden_size,encoder_hidden_size, num_layers=1, dropout=0.5):
         super(lstm_decoder, self).__init__()
         self.input_size = input_size
-        self.hidden_size = hidden_size*2
-        self.attention = Attention(self.hidden_size ,self.hidden_size )  # Account for bidirectional encoder
-        self.lstm = nn.LSTM(input_size=input_size+self.hidden_size, hidden_size=self.hidden_size,
+        self.decoder_hidden_size = decoder_hidden_size
+        self.encoder_hidden_size = encoder_hidden_size*2
+        self.attention = Attention(  self.encoder_hidden_size, self.decoder_hidden_size )  # Account for bidirectional encoder
+        self.lstm = nn.LSTM(input_size=input_size+self.decoder_hidden_size, hidden_size=self.decoder_hidden_size,
                             num_layers=num_layers, dropout=dropout, batch_first=True)
 
     def forward(self, x, hidden, cell, encoder_outputs):
@@ -96,10 +97,10 @@ class lstm_seq2seq(nn.Module):
         super(lstm_seq2seq, self).__init__()
         self.encoder = lstm_encoder(input_size=input_size_encoder, hidden_size=hidden_size_encoder,
                                     num_layers=num_layers)
-        self.decoder = lstm_decoder(input_size=input_size_decoder, hidden_size=hidden_size_decoder,
+        self.decoder = lstm_decoder(input_size=input_size_decoder, decoder_hidden_size=hidden_size_decoder,
                                     encoder_hidden_size=hidden_size_encoder,num_layers=num_layers)
 
-        self.linear = nn.Linear(self.decoder.hidden_size, vect_size_decoder)
+        self.linear = nn.Linear(self.decoder.decoder_hidden_size, vect_size_decoder)
         self.dropout = nn.Dropout(dropout)
         self.layer_norm = nn.LayerNorm(vect_size_decoder)
         self.init_weights()
@@ -150,6 +151,8 @@ class lstm_seq2seq(nn.Module):
                 decoder_output = torch.multinomial(topk_probs, 1).squeeze(1)
             else:
                 raise ValueError('Invalid select_strategy')
+
+
             predictions.append(decoder_output)
 
             decoder_output = [vocabulary[idx] for idx in decoder_output.tolist()]

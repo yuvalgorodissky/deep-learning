@@ -46,7 +46,7 @@ def get_dataset(lyrics_path, midis_path):
     return Dataset.from_dict(dataset)
 
 
-def get_features(midi_file):
+def get_features_instrument(midi_file):
     # Get beat times
     beats = midi_file.get_beats()
     beats_length = len(beats)  # Number of columns in the matrix
@@ -97,11 +97,22 @@ def get_lyrics_features(lyrics, word2vec_model, vocabulary, word_to_index):
     return lyrics_features_tensor, words
 
 
-def get_melody_features(midi_file_path):
-    midi_file = load_midi(midi_file_path)
-    features = get_features(midi_file)
-    return features
+def get_features_from_piano_roll(midi_file):
+    # Get beat times
+    piano_roll= midi_file.get_piano_roll(fs=2)
+    piano_roll = torch.tensor(piano_roll, dtype=torch.float32)
+    return piano_roll
 
+def get_melody_features(midi_file_path,strategy):
+    midi_file = load_midi(midi_file_path)
+    x=get_features_instrument(midi_file)
+    y=get_features_from_piano_roll(midi_file)
+    if strategy == "instrument":
+        return  get_features_instrument(midi_file)
+    elif strategy == "piano_roll":
+        return get_features_from_piano_roll(midi_file)
+    else:
+        raise ValueError("Invalid strategy")
 
 def collate_fn(batch):
     lyrics_features, melody_features, words = zip(*batch)
@@ -137,25 +148,16 @@ def collate_fn(batch):
     return lyrics_features_padded, melody_padded, words_padded
 
 
-def get_dataloader(lyrics_path, midis_path, batch_size, word2vec_model, vocabulary, word_to_index):
+def get_dataloader(lyrics_path, midis_path, batch_size, word2vec_model, vocabulary, word_to_index, melody_strategy):
     dataset = get_dataset(lyrics_path, midis_path)
     new_dataset = []
     for i in range(len(dataset)):
         try:
             lyrics_features, words = get_lyrics_features(dataset["lyrics"][i], word2vec_model, vocabulary, word_to_index)
-            melody_features = get_melody_features(dataset["midi_path"][i])
+            melody_features = get_melody_features(dataset["midi_path"][i], melody_strategy)
             new_dataset.append((lyrics_features, melody_features, words))
         except Exception as e:
             print(f"Skipping file {dataset['midi_path'][i]} due to error: {e}")
             continue
 
     return DataLoader(new_dataset, batch_size=batch_size, shuffle=True, collate_fn=collate_fn)
-
-# todo remove duration from the feature vector
-
-
-#
-# midi_path = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/data/midi_files"
-# lyrics_path = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/data/lyrics_test_set.csv"
-#
-# midi_path_file = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/data/midi_files/abba_-_dancing_queen.mid"

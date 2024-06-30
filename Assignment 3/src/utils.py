@@ -33,8 +33,6 @@ def pred_to_lyrics(predictions,vocabulary):
     for prediction in predictions:
         lyric = []
         for word in prediction:
-            if word == '&':
-                word='\n'
             lyric.append(vocabulary[word])
             if word == EOS_TOKEN:
                 break   # Stop generating lyrics if the model predicts the end of the song
@@ -56,6 +54,7 @@ def extract_language(path,word2vec):
     for lyric in lyrics:
         words = word_tokenize(lyric)
         for word in words:
+
             if word in word2vec:
                 vocabulary.add(word)
 

@@ -7,7 +7,7 @@
 
 #SBATCH --partition main			### specify partition name where to run a job. main: all nodes; gtx1080: 1080 gpu card nodes; rtx2080: 2080 nodes; teslap100: p100 nodes; titanrtx: titan nodes
 #SBATCH --time 1-10:30:00			### limit the time of job running. Make sure it is not greater than the partition time limit!! Format: D-H:MM:SS
-#SBATCH --job-name job_0.5			### name of the job
+#SBATCH --job-name job_1			### name of the job
 #SBATCH --output '/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/out_jobs/%x-%J.out'			### output log for running job - %J for job number
 #SBATCH --gpus=rtx_6000:1				### number of GPUs, allocating more than 1 requires IT team's permission
 

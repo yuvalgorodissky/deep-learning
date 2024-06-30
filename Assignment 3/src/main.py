@@ -1,7 +1,7 @@
 import torch
 from torch import nn, optim
 from torch.utils.data import DataLoader
-
+from torch.cuda.amp import autocast, GradScaler
 # Assuming it's the correct DataLoader from previous context
 from train import train
 from model import lstm_seq2seq  # Assuming your model's module is correctly named
@@ -22,20 +22,20 @@ def main():
     lyrics_path = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/data/lyrics_train_set1.csv"
     word2vec_model = api.load('word2vec-google-news-300')
     test_path = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/data/lyrics_test_set.csv"
-    model_save_path = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/models/seq2seq_model_0.5.pth"
+    model_save_path = "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/models/seq2seq_model_1(2).pth"
     vocabulary, word_to_index = extract_language(lyrics_path, word2vec_model)
 
-    teacher_forcing = 0.5
+    teacher_forcing =1
     # Hyperparameters
     input_size_encoder = 128 * 3  # Placeholder, adjust according to your actual input size
-    hidden_size_encoder = 512
+    hidden_size_encoder = 256
     input_size_decoder = 300
-    hidden_size_decoder = 512
+    hidden_size_decoder = 256
     vect_size_decoder = len(vocabulary)
     num_layers = 2
     learning_rate = 0.001
     batch_size = 4
-    epochs = 150
+    epochs = 30
 
     dataloader = get_dataloader(lyrics_path=lyrics_path, midis_path=midi_path, batch_size=batch_size,
                                 word2vec_model=word2vec_model, word_to_index=word_to_index, vocabulary=vocabulary)

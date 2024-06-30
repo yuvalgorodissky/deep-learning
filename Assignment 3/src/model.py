@@ -61,7 +61,7 @@ class lstm_encoder(nn.Module):
 class lstm_decoder(nn.Module):
     ''' Decodes hidden state output by encoder with dropout '''
 
-    def __init__(self, input_size, hidden_size, num_layers=1, dropout=0.5):
+    def __init__(self, input_size, hidden_size,encoder_hidden_size, num_layers=1, dropout=0.5):
         super(lstm_decoder, self).__init__()
         self.input_size = input_size
         self.hidden_size = hidden_size*2
@@ -97,7 +97,8 @@ class lstm_seq2seq(nn.Module):
         self.encoder = lstm_encoder(input_size=input_size_encoder, hidden_size=hidden_size_encoder,
                                     num_layers=num_layers)
         self.decoder = lstm_decoder(input_size=input_size_decoder, hidden_size=hidden_size_decoder,
-                                    num_layers=num_layers)
+                                    encoder_hidden_size=hidden_size_encoder,num_layers=num_layers)
+
         self.linear = nn.Linear(self.decoder.hidden_size, vect_size_decoder)
         self.dropout = nn.Dropout(dropout)
         self.layer_norm = nn.LayerNorm(vect_size_decoder)
@@ -123,9 +124,8 @@ class lstm_seq2seq(nn.Module):
         decoder_hidden, decoder_cell = encoder_hidden, encoder_cell
         predictions = []
         logits = []
-        last_output = get_embeddings(word2vec, SOS_TOKEN)
+        last_output=lyrics_input[:, 0, :].view(batch_size, 1, self.decoder.input_size)
         ##expend to batch size
-        last_output = last_output.expand(batch_size, 1, self.decoder.input_size)
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         for t in range(target_length):
@@ -155,7 +155,7 @@ class lstm_seq2seq(nn.Module):
             decoder_output = [vocabulary[idx] for idx in decoder_output.tolist()]
 
             # Implementing teacher forcing
-            if torch.rand(1).item() < teacher_forcing_ratio:
+            if torch.rand(1).item() <= teacher_forcing_ratio:
                 last_output = lyrics_input[:, t, :].view(batch_size, 1, self.decoder.input_size)
             else:
                 words_embeddings = []

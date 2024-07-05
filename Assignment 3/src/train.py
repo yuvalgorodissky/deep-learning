@@ -2,7 +2,7 @@ from torch.cuda.amp import GradScaler, autocast
 from tqdm import tqdm
 from model import *
 
-def train(model, dataloader, optimizer, criterion, device, epochs, vocabulary, word2vec, writer,teacher_forcing_ratio=0.5):
+def train(model, dataloader, optimizer, criterion, device, epochs, writer,teacher_forcing_ratio=0.5):
     model.train()
     model.to(device)
     scaler = GradScaler()
@@ -19,7 +19,7 @@ def train(model, dataloader, optimizer, criterion, device, epochs, vocabulary, w
             optimizer.zero_grad()
 
             with autocast():
-                outputs, logits = model(melody_features, lyrics_features, vocabulary, word2vec, teacher_forcing_ratio=teacher_forcing_ratio)
+                outputs, logits = model(melody_features, lyrics_features, teacher_forcing_ratio=teacher_forcing_ratio)
                 loss = criterion(logits, targets)
 
             scaler.scale(loss).backward()

@@ -148,7 +148,7 @@ def collate_fn(batch):
     return lyrics_features_padded, melody_padded, words_padded
 
 
-def get_dataloader(lyrics_path, midis_path, batch_size, word2vec_model, vocabulary, word_to_index, melody_strategy):
+def get_dataloader(lyrics_path, midis_path, batch_size, word2vec_model, vocabulary, word_to_index, melody_strategy,shuffle=True):
     dataset = get_dataset(lyrics_path, midis_path)
     new_dataset = []
     for i in range(len(dataset)):
@@ -160,4 +160,4 @@ def get_dataloader(lyrics_path, midis_path, batch_size, word2vec_model, vocabula
             print(f"Skipping file {dataset['midi_path'][i]} due to error: {e}")
             continue
 
-    return DataLoader(new_dataset, batch_size=batch_size, shuffle=True, collate_fn=collate_fn)
+    return DataLoader(new_dataset, batch_size=batch_size, shuffle=shuffle, collate_fn=collate_fn)

@@ -6,15 +6,16 @@ from torch.utils.data import DataLoader
 from torch.cuda.amp import autocast, GradScaler
 # Assuming it's the correct DataLoader from previous context
 from train import train
-from model import lstm_seq2seq  # Assuming your model's module is correctly named
 from data_preprocessing import get_dataloader
 import gensim
 import gensim.downloader as api
 import nltk
 from nltk.corpus import words
-from utils import extract_language, save_model, load_model, pretty_print_params, CustomCrossEntropyLoss
+from utils import extract_language, save_model, load_model, pretty_print_params, CustomCrossEntropyLoss,set_seed
 from generate_lyrics import get_generated_lyrics
 from torch.utils.tensorboard import SummaryWriter  # Import TensorBoard
+from model import lstm_seq2seq
+
 
 
 def get_args():
@@ -45,7 +46,7 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     word2vec_model = api.load('word2vec-google-news-300')
     vocabulary, word_to_index = extract_language(args.lyrics_path, word2vec_model)
-
+    set_seed(42)
     writer = SummaryWriter(args.writer_path)  # Initialize TensorBoard writer
 
     dataloader = get_dataloader(lyrics_path=args.lyrics_path, midis_path=args.midi_path, batch_size=args.batch_size,
@@ -59,7 +60,10 @@ def main():
         input_size_decoder=args.input_size_decoder,
         hidden_size_decoder=args.hidden_size_decoder,
         vect_size_decoder=len(vocabulary),
-        num_layers=args.num_layers
+        num_layers=args.num_layers,
+        word2vec_model=word2vec_model,
+        word_to_index=word_to_index,
+        vocabulary=vocabulary
     )
 
     pretty_print_params(model)
@@ -68,23 +72,26 @@ def main():
     criterion = CustomCrossEntropyLoss(next_line=word_to_index['&'], ignore_index=0)
 
     # Training
-    train(model, dataloader, optimizer, criterion, device, args.epochs, vocabulary, word2vec_model,
-          teacher_forcing_ratio=args.teacher_forcing, writer=writer)
+    train(model, dataloader, optimizer, criterion, device, args.epochs, teacher_forcing_ratio=args.teacher_forcing,
+          writer=writer)
 
     save_model(model, args.model_save_path)
 
-    test_dataloader = get_dataloader(lyrics_path=args.test_path, midis_path=args.midi_path, batch_size=args.batch_size,
-                                     word2vec_model=word2vec_model, word_to_index=word_to_index, vocabulary=vocabulary,
-                                     melody_strategy=args.melody_strategy)
+    #
+    # model = load_model(args,args.model_save_path)
+    # model.to(device)
+    #
+    # test_dataloader = get_dataloader(lyrics_path=args.test_path, midis_path=args.midi_path, batch_size=args.batch_size,
+    #                                  word2vec_model=model.word2vec, word_to_index=model.word_to_index,
+    #                                  vocabulary=model.vocabulary,
+    #                                  melody_strategy=args.melody_strategy)
+    #
+    # predictions, targets = get_generated_lyrics(model, test_dataloader, device)
+    #
+    # for i in range(5):
+    #     print("prediction: ", predictions[i])
+    #     print("target: ", targets[i])
 
-    model = load_model(args.model_save_path)
-    model.to(device)
-
-    predictions, targets = get_generated_lyrics(model, test_dataloader, device, word2vec_model, vocabulary)
-
-    for i in range(5):
-        print("prediction: ", predictions[i])
-        print("target: ", targets[i])
 
 
 if __name__ == "__main__":

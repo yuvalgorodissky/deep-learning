@@ -1,0 +1,432 @@
+Strategy: prob
+Start token: first_word
+Prediction: close jesus dance & the tryna so fast & went cruise & every all the shoppers & & do the most the place & be & & if your aim for across your string spark & i lay the honesty paid & license these gunk & who the said true & then you & & then & do you can have speak & & if you then then boys in & my before & day & & & there no then & play is & then & & & & & get if man & help myself & & & & & & think that & & & see & & will tell me & love & god me help you & i me & you & tell & you kind meters & & ground & on the fire fairytales & i some people can is that you & & see & you know me & i do & get me & reasons & i understand & i these & & put you & the place in my am & i my & & you happen me & & me me & & i think what i far & you i & with my mind & i gettin when you & & & & you do take & help me when you flaming & & sing is awoken & my & & grabbed out my swears shrooms & been one know & he children echoing & playboys been away my thought & he still saw & & unspoken & & she my do & help you on the open & let me show you & think i am & when this & friend mine & & you ever tell for walk & the pocketful above & we rolling at & or
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.12666666666666668
+Jacard n=2: 0.03460207612456748
+
+**************************************************
+Strategy: prob
+Start token: SOS
+Prediction: gold writing old say & the was & & then scared architect hate & & out with every one i & & & law was blame & an heavenly monday & spose outside nursing you & i in the these fill in in & & & somebody when you get the & & & & & & & me & what i need & when you get me & i hope you & when & & take & & & & through & details & & autumn maybe & want it claret & on the the border & for love fear & the circles man & & you can do some escape & cause then you believe me & better love does & if you help me & like this scene & & help me take rather coz & & & the want you & & you still & & in my desires & i then you back hope & better steady & & doorstep & & you love my father sign & bonny then the have & & & you get lest you work think i make then points & & my way & i mission & gotten lawyer get close & whip & i the the the my father & & gas weed & & my window & tell & what is kids want wait & you do & you get & & come & & your five & you & & take & my own & & the sign & come at & powers middle & you put your faith in rhythm then & smoke & her way & the son will accidentally & & name biz will bust & & on get hard & the where you can roll & you can shit breathe & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.14
+Jacard n=2: 0.020689655172413793
+
+**************************************************
+Strategy: prob
+Start token: random
+Prediction: falter question hot santa & fit the young & & then you was much & & mankind & following the the booty out the made & god attitude it is another mountain & & bullet cause & & in the they got they say & look if or & & then i have ask me & & like like man & i understand & i guess you then in this on the morning day & i awake believe your & strumming wrapped wail & the king & the no what i hero & weather is that same town contracts or smoke & & my walk through the rock me & the love love find some big having help me & if you want then i burn & & place & & & your five & quickly & you & my they killers or away & & morning & & i returned for forget in & been & & in the & & & i sometimes i can i just help & & like my oven & & my kneel cause exactly you & but my luck details & & want hurt & take away & is & & in the have & & & know how big watts loc & my big words cause maria me & lifted with the take home & & need drawn eyes up & my game is & my faint & & unh ireland & & he said & & in the the five york know if the weeks or & can help me the you help me take advice if i & i hope & heat is & my wok is on my mondays & if you like the me & i help you what kind & & then you tell you & you like
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.12179487179487179
+Jacard n=2: 0.026402640264026403
+
+**************************************************
+Strategy: argmax
+Start token: first_word
+Prediction: close well well say & the the & & you you you this & & & & & you love me this & & i in your in the game & i have you in the game & help me explain you what you & & you help me & you know & what you & & you you said & you & & i know & & like my day & i you you get my & & me & & & & & & & & & & & & & & & & & & & & & & & & & & & & help me take you & & & & & & & & & & & & & & & & & & & & & help me take take & & i am & & when & get my & & help me & & & & & & & & & & & & & & & & & & & & & & help me take take & & i am & when i get & & & & & & & & & & & & & & & & & & & & help me help me & you want help me & this is & & & & & & & & & & & & & & & & & & & & help me take take & & i am & when i get & & & & & & & & & & & & & & & & & & & & help me help me & you help me & & & & & want help me & & & take those place & & you you & & & get & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.19718309859154928
+Jacard n=2: 0.02040816326530612
+
+**************************************************
+Strategy: argmax
+Start token: SOS
+Prediction: well well say & the & & & you you this & & & & & you leave me & it & & in the middle the streets & & in the are too too & & too hot too hot too hot homie & make & sense & this mess that we made & another day in my & & but i believe believe & when then are & & & help me take you & & & & hope & & will tell you & & & i can i you & & i i take my you & i get my the & & & you & & & & & & & & & & & & & & & & & & & & & & & & & & & help me take my the & & & & & & & & & & & & & & & & & & & & & & & help me take my & & & & help me & & & & & want help me & & & take my & & & & & & & & & & & & & & & & & & & & & & & & & help me take my & & & & help me & & & & & & & & & & & & & & & & & & & & & & & & help me help me & & & help me take you & & & & & & & & & & & & & & & & & & & & & & & & help me take my place & & & & & & & help me & & & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.16049382716049382
+Jacard n=2: 0.025806451612903226
+
+**************************************************
+Strategy: argmax
+Start token: random
+Prediction: falter easy old & & the was so & & like you be out & & with & & & i know your in the before & & i want your in your eyes & i i when you are & & i want you you my days & i can get my faith & i have & & when you get my & & i hope you well i have my my & & you you & & you & & & & & & & & & & & & & & & & & & & & & & help me take some place & & have you get & & & help me explain & what you & & get this & & & & & & get & & & & & & & & & & & & & help me take take & & i am & when i get & & & & & & & & & & & & & & & & & & & help me help me & you & & & help me take you & & & & & & & & & & & & & & & & & & & & & & & & & & help me take my place & & & hope & when you get & & & & & & & & & & & & & & & & & & & help me help me & & & & help me take you & & & & & & & & & & & & & & & & & & & & & & & & & help me take my place & & & & & & & help me & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.2077922077922078
+Jacard n=2: 0.04516129032258064
+
+**************************************************
+Strategy: topk
+Start token: first_word
+Prediction: close well well & say the the & & too you you & out & & something & & & in & & before you can you & in & in the game & lies in the streets & lies too the can been too & & wait or you walk & & & & & & & & you & & then you help me & take those crazy i & & & & you get from this from me & i & at & have & me & you & i get play just like us crazy & then i help you come & & make me take & & i need you i the you & & i have my reasons & i understand & how i wish i come my life & & i i you i my you & i get me & & & & & & & & & & & & & & the the & & & have & & something help me help & take my & & help me crazy & & help me if you help & & this is is on & & on & have no no & i i my dream the & if i help you believe & & then take me from the way & & my days & & you & my life & what then i & & & when i get the & & see how you i can & & this & & & & you i & you & & then you take me the think me & think & i have no more & you you & & & get take me & & you take the from the horse & i need my when you have &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.17708333333333334
+Jacard n=2: 0.038461538461538464
+
+**************************************************
+Strategy: topk
+Start token: SOS
+Prediction: well niggas is & the then & & & like this really up & & & something more & i in the in the news & & in your fire & i bought it for you & another & & i or get & & i want & & in the game & i i my son you find you some way & & help me explain & you know & i i & & if you take my from & me & i i have my you & & my do & & you you & & you me & me & & & & you know & & get is & you want me & you & me & do you want get & & & & ride on & you & no need no come & & no set in & & & find & take my & & place & & & something you get & this & & & take from the take your & & no need & i & if you take this this & & i do & my the & when you take my & & you the the tank & & my the friends come & & you & the the & & & & get the & & & & & you get the same & & & & & help me the tank & & & no have is & me & & i get the the & & & & & help me & come on & on on & you put your the on your ride & & you son & ready & & watch & & & five & & i want & & & & & & you & & me the the &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.1827956989247312
+Jacard n=2: 0.04205607476635514
+
+**************************************************
+Strategy: topk
+Start token: random
+Prediction: falter easy old old & the the the & so much be out the & & & & & out & the out & & your love & for your own the & i be what you & or you can save me & you know i & in my mind & & my my son & these you with me & & you get me & i me & & then you say & you help me & & like the & & & & & & & & & & & me & you help me & think i help me & these are & & understand & you know what like do & & get & me & you me see & & & & & hope in & & & me & & & & & & & & me & i want you & i me help me & i see how & take my when you can take you & & & take take my the the & & my love & & & do you want & & & i take from you from & & & then you get my & & & & & my five & & & & & my & & me help me & & & & & help me explain & if you help me here will you & & & i take my you & i make some you & & & & you you get from this you & & i get what you do & & when you get the & & & i need your reasons that i try & i get my way & you & & my the & & & & & get you get my own & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.20652173913043478
+Jacard n=2: 0.057692307692307696
+
+**************************************************
+Strategy: prob
+Start token: first_word
+Prediction: close need wonderland off lands you i want the rhythm chorus kill & & hand & then & & around gone & & & sound that & the people & reindeer selling & & the it it & & the people it & oh i i it her the it i so & & & & the were & it the it & is i the the i it it & & me the & & & & me me i the me & the & me & i i i the & the i i & & the & & & i me about & & the i i the me me & & & & me me & & me me you me the & i & the i i turn what me i like the my i the i i & the & i me & me cause & like i & i & & i & me the & me & me i & & i & that & me me you & & & i & me live & me me i & & me the & & the me the & me & & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.16455696202531644
+Jacard n=2: 0.0392156862745098
+
+**************************************************
+Strategy: prob
+Start token: SOS
+Prediction: need each cooked gunk & i stuff fuck the the you the aside you & & closed & & i & & will & no & & back up & & the i it & the & it it i & & & the the & it it & so i so & so & it me turn & & & the & i the me i & think the the the my i & i & the on like i it me & i cause & the & me & i me the the & & & i they the i just me & & the me & the awfully the is i the me & i i it & the just & & & my & & & me & i me i & i me like have i the the & & so i & the the me i i you the & me & the i i & get me & & can i you & the the & me i & me & me i <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.11392405063291139
+Jacard n=2: 0.012987012987012988
+
+**************************************************
+Strategy: prob
+Start token: random
+Prediction: burst they woh niggas memphis amazing coz you fourth lingers can the & & & & & & just & showing & & & & sound & & made & it just made it money it guy i it it win & & it & it & so so & i it & the i i & i i the i & just on & i it my & & & & i the live what it it & me & the for my faithful the it i i me like i & & & so like i & the me the i i & & the & & the & & & the so me i the & the get me me it the & & & i & around the i & & i the & & i i life & i i me & & me the & & & i i & me the i & & me me i me the i i & me my i & me me i & me me me & me & i & & the & me & i you me me me it me & & i & me & & me & & on another & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.10975609756097561
+Jacard n=2: 0.01875
+
+**************************************************
+Strategy: argmax
+Start token: first_word
+Prediction: close we each the feeling & i i the much the the & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & i & & & i & & & i & & i & & i & & i & & & i & & & i & & & me & & me & me & me & me & me & me & me & & me & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.10344827586206896
+Jacard n=2: 0.03296703296703297
+
+**************************************************
+Strategy: argmax
+Start token: SOS
+Prediction: we each the feeling & i i it much the the & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & i & & & i & & & i & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.0847457627118644
+Jacard n=2: 0.033707865168539325
+
+**************************************************
+Strategy: argmax
+Start token: random
+Prediction: burst we each the feeling & i i the much the the & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & i & & & & & & i & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.06779661016949153
+Jacard n=2: 0.022222222222222223
+
+**************************************************
+Strategy: topk
+Start token: first_word
+Prediction: close need each feet forgive & i i the the what the & & you even & & & & & & up & the & up & & & & the & & the & & it the the the so the & & & & & i & i & & i the & & i i & like & the & i & i & & i & the & me i & & the i i & i & me & like & i i the i me me & & the i i the the i & & & the & i the the me i the & me i & me i the & & & & the me the me i & me i me i & & the me me the & & & i i i i me & & me i & & & i & me the i & me me & i & i & me & & me & me & i & the & me me <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.125
+Jacard n=2: 0.02727272727272727
+
+**************************************************
+Strategy: topk
+Start token: SOS
+Prediction: we can man off & i i it what much & the you & you & & & & & & & & up up the the find & & people & the & i & & & & & & so it & i the i i & the i i & & like the i & & the like & & i like & like & like the me & i i & & & like like i & i i & the & & me i the the & like i the the the & & & & & i & the i i the & me & me the i & i & me the i & the & & & i & & & & & & i & & & & & & i me me & & me me me me i & & the & & & & the me me & & the & i & me me & & i & & & & & i & & & me & & & & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.10606060606060606
+Jacard n=2: 0.03361344537815126
+
+**************************************************
+Strategy: topk
+Start token: random
+Prediction: burst can have the sun & i i the put the at you & & & & & ever around & & & the & & & & & the & & & & & & it & the it & & so the it & & so i so i & i it & i like it like & the it the & & & & the & like & & & me & i i like & the & me me & i me & i & me & & i & & the & & like & i the & & & the & i & i me & me i & the i me the me & i & the & i i & & i & the i & i i i & i & the i & i me i me & & & i & & & i & i the i me me me i & i & the i i & i me & the i & me i i me & & me me & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.125
+Jacard n=2: 0.025423728813559324
+
+**************************************************
+Strategy: prob
+Start token: first_word
+Prediction: close drew an empty clever & i was in shy chorus & i angels bells in the candlelight & when looking for your room & wake up your bleeds & ring problems & woo & circus & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.10666666666666667
+Jacard n=2: 0.017857142857142856
+
+**************************************************
+Strategy: prob
+Start token: SOS
+Prediction: conversations lighten & snowman moment die meat & stone zipped in somewhere & could it be long enough & better temptation from & seated heart & would so walk hole in that we nicer & idly stopped & loss o'er & ooh the voice what wiped & inside you & remember the voice noel & lookin night & sirius came hated & stairs as bomber & be right fire & for squeezing & thrill & for every & dancer & can sunny & goes from the alleluia & tonight & tonight & baby groove & yeah & mental is & it & bath the your attitude & where your reign has regret & when you are happening & the mistery laid down & wintertime & steely um i & sherry said you & lessons rest & pie miedo lisa & can you dig e your warned & rack forgotten & did you think want hear & make giving it blind & when i done you hear & that tonsils sha delight & dis darling & never know & sailing lennon stood high & hid in the casi & calm any seem & now want brand year & angles i aunt & but i never knew thing & how forgive you & foul & ragged yesterday & & about & aways in the block & cadillac just underneath & thirsty sparks & look at the reach & thump when & tonsils diggity & limousine & late in does & late bitch & & what you & & born & & delusions & tired thorn & graveyards & my cages & my teachers in my own & dark world are lousy & but i moist & everybody knows always & be waiting for & se expert businessmen & trot in the pastime
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.0660377358490566
+Jacard n=2: 0.00847457627118644
+
+**************************************************
+Strategy: prob
+Start token: random
+Prediction: astral misunderstanding & deep master billboard & ransom virgin under the peace & the sentimental marriage & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.045454545454545456
+Jacard n=2: 0.010638297872340425
+
+**************************************************
+Strategy: argmax
+Start token: first_word
+Prediction: close hush now & we never told the thing the way before & praise & for day i felt & give you the blue & give you & believe it & be the only & i want hear & in the heart darkness & there can believe & still step & if we could be lovers & soon go away & but i was fool & that been right & been back me & show me & that leaving & think & & close & close & close & close & close & close & close & close & close & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.14130434782608695
+Jacard n=2: 0.025806451612903226
+
+**************************************************
+Strategy: argmax
+Start token: SOS
+Prediction: hush now child & together buy & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.03333333333333333
+Jacard n=2: 0.011904761904761904
+
+**************************************************
+Strategy: argmax
+Start token: random
+Prediction: astral welcome & sleigh on the break & ooh & love is hard & come on look at me & ooh & ooh your arms your best & they say too & but gone & oh but looking for time & what am i & new day night & cause i got the & hold you & drive me around & cool the neighborhood & make them about bad mind & if you want me here see & if you friends song & then you say the words & his shoe & come on by do & simple simon & & all i said is the hello & say so & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.14285714285714285
+Jacard n=2: 0.03409090909090909
+
+**************************************************
+Strategy: topk
+Start token: first_word
+Prediction: close hush now & we never told the thing before the all goes & you pay your days & got all your life & it for rainy & but if it done & tell me baby & i know & there rather no one can say & i under our fuck & i never vision fall in love & but we say goodbye & we know & our words will be short & man heart still & tell me why & but mistake & tell me why & i never want hear you say & i want it that way & am i your & your one friend & day as your honey & i can not save you & oh if you please & baby you got the way & love & for you & take chance from me & if you need your things & you let me by & close your & why if you mean & we try la feels alright & everyone back the same & another king on the day & lido & reaching new girl & walk like man before & walk like man & after walk & i needs thousand my life & i been so lonely & i am i will know & yes i would go & living in world & as whole star star & face the & her own fantasy & in every anytime & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.13013698630136986
+Jacard n=2: 0.04460966542750929
+
+**************************************************
+Strategy: topk
+Start token: SOS
+Prediction: hush now & look at & well & done & deep without sense & ooh without warm eyes & when you hear me walking out & then they say & away & but does & anybody & if you left & & walk until you give & the guitar your soul & & chorus & let the music heal your soul & let the music take control & let the music give you the power & move any mountain & if someone plays piano with some simple & chords & so melodic endearing too & oh if someone plays guitar with the old & piano & maybe you can hear them sing & & music gives you happiness sadness & & but it also & it also heals your soul & chorus & & let the music heal your soul & let the music take control & let the music heal your soul & chorus 4x & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.11607142857142858
+Jacard n=2: 0.015789473684210527
+
+**************************************************
+Strategy: topk
+Start token: random
+Prediction: astral hush & child you see & no one wish hurt me & now you do me & you say if i if i had an place & you in the face i was hiding & from the bottom waiting burning me & well i window & the empty space & i just need save it & my on the outside & right & worry i want long & you got me day start & lord i miss you & save sleep & you run & at me & turned me around guiding & now & ooh sorry but no one on the line & & ooh sorry but rest easy no news is good news & oh too easy love your future & if i promise you the life seem nice & but i hope you somehow be coming & & someone made me say & i want learn you for all & i want hold you back & treat some nice man but gone & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.12598425196850394
+Jacard n=2: 0.02262443438914027
+
+**************************************************
+Strategy: prob
+Start token: first_word
+Prediction: close another visions pearly & sister thy rewind & mist trophies fall & whip attitude having dixie & breaking may someone forever unfolding & when i struggle the mess & nodded coming by my side & but i was italian was king & now now i daughters thirty clock & not welcome heaven & my heart stays with you & my heart stays with you & after every show & i want rush over you & my heart stays with you & trust me when we are apart & i break your heart & wherever you are i know you feel me baby & i can feel you too & no matter what you do & i think you & & baby yeah & when leaving town & girl it hurts me too & but got job do & be back around & see your sweet face & your bliss & no way & take you & photograph i never need & when i look at you & i feel memory & looking closer & i know & i feel the sunlight & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.12686567164179105
+Jacard n=2: 0.03139013452914798
+
+**************************************************
+Strategy: prob
+Start token: SOS
+Prediction: live in powder belong & toda or & i fresh matches & been bring me long & take chance & take chance & oh & i need you & honey can you again & you can clubs & here & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.0958904109589041
+Jacard n=2: 0.02702702702702703
+
+**************************************************
+Strategy: prob
+Start token: random
+Prediction: tempt another restless signed & by the isles & got the ring & step like & i need if your father call them & & smacker up yell from the clock look & not thought & too losers & not intent & just tell & the clock is alive & niggas outside this this money & hello & mainly christmas my charade & clint how lonely heaven & sighing frankincense sense staring & problems & male x2 bad durst & been so yesterday gone & manner you south & take things from your nation & late time will never look the dissolves & gives up my blind little simple & but floors guaranteed & when i presence yesterday & the closer & starry simple & fast you wild & caught up in heaven & my heart is easy & fly on the wear side & so that stilton could know & the year looking more & look around & leaves are brown & the sky & is hazy shade winter & look around & leaves are brown & patch snow on the ground & look around & leaves are brown & patch snow on the ground & look around & leaves are brown & patch snow on the ground & look around & leaves are brown & patch snow on the ground & look around & leaves are brown & patch snow on the ground & look around & leaves are brown & patch snow on the ground & look around & leaves are brown & patch snow on the ground & look around & leaves are brown & patch snow on the ground & look around & leaves are brown & patch snow on the ground & look around & leaves are brown & patch snow on the ground &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.08552631578947369
+Jacard n=2: 0.012345679012345678
+
+**************************************************
+Strategy: argmax
+Start token: first_word
+Prediction: close another heart um baby & you can play & you know my love will i do & my time are & my heart doll & my love is alive i have no & yeah & not ever say & if i had little girl & been away & when thing from the morning & the day is high & the lonely nights & are mine at the beat my heart & i give you & baby my heart & who wants give you an & you find me baby & i know & i know how & you got go & how i tried say you & but i & i want say that he & sorry & & when i done & pins needles & well i lie easy & all the time but never sure & why i need you & pleased meet you & i got my head down & when i was young & not my problem & not my problem & & when i feel & pins needles & well i lie easy & all the time but i am never sure & why i need you & pleased meet you & yeah yeah & yeah yeah & yeah yeah & oh yeah & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.1724137931034483
+Jacard n=2: 0.0228310502283105
+
+**************************************************
+Strategy: argmax
+Start token: SOS
+Prediction: baby in the york & lying in love & sweet little good she had you kid & but i sure as the girl i found & maybe if she never leaves & i feel the way i do & the everyone that loves & smile if i feel blue & find my love & i remember & the my friends & while my car are very away & i will buy you garden & where your flowers can bloom & i will buy you new car & perfect shiny new & i will buy you that big house & way up in the west hills & i will buy you new life & i will buy you new life & i know we can never look back & will you please let me stay the night & will you please let me stay the night & no one will ever know & i will buy you garden & where your flowers can bloom & i will buy you new car & perfect shiny new & i will buy you that big house & way up in the west hills & i will buy you new life & i will buy you new life & i know we can never look back & will you please let me stay the night & will you please let me stay the night & no one will ever know & i will buy you garden & where your flowers can bloom & i will buy you new car & perfect shiny new & i will buy you that big house & way up in the west hills & i will buy you new life & i will buy you new life & i know we can never look back & will you please let
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.09649122807017543
+Jacard n=2: 0.010471204188481676
+
+**************************************************
+Strategy: argmax
+Start token: random
+Prediction: tempt another all kid you go & something you do & not phased & i think & big big stars & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.07575757575757576
+Jacard n=2: 0.020618556701030927
+
+**************************************************
+Strategy: topk
+Start token: first_word
+Prediction: close another heart guitar & quit games & my heart & with somebody heart & you heart i can do & but my heart is so from & i hope you & not love love & i lost you & i eyes at the & i was so hard make & you always see me & but i always think & know where did you go away & when i was still & not right & but the dark night shines & or the rhythm so hip & leave your cares behind these are the good times & good times these are the good times & our new state mind these are the good times & rumor has it that getting late & time marches on just wait & the clock keeps turning why hesitate & you silly fool you change your fate & cut the rug little jive jitterbug & we want the best we settle for less & be drag participate & clams on the half shell roller skates roller skates & good times these are the good times & leave your cares behind these are the good times & good times these are the good times & our new state mind these are the good times & leave your cares behind these are the good times & when these times the they are too good & stay on the talk & the clock easily huh huh & on the radio & whoa oh oh & on the radio & whoa oh oh & on the radio & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.14893617021276595
+Jacard n=2: 0.024489795918367346
+
+**************************************************
+Strategy: topk
+Start token: SOS
+Prediction: another is kid in sky & you got me so fine & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.09836065573770492
+Jacard n=2: 0.022727272727272728
+
+**************************************************
+Strategy: topk
+Start token: random
+Prediction: tempt another all kid you go & find out pretty mama & let me be the one & come me on & oh be free & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.10144927536231885
+Jacard n=2: 0.009708737864077669
+
+**************************************************
+Strategy: prob
+Start token: first_word
+Prediction: close this your my bear & the seasons are find & walking avec nights i trace & i love it is right & you left me & actors & & remember & were the & & brighter could the & i & you i tried show & i longing was beautiful & for you & when you were my & & i could see you stranger & you the up & deep & & i it & like brighter & & & & it me & that way & & i i go & somebody & & & maybe i will never walk & & & & me & & & brighter than & & believed & that i could & you so & & like & & & could i & reaching away & more & with & again & & & it & be & we & hold on my highway & stars & me & your claiming tripped & too remember & the walk leave & & & you max & stronger & tried & so far away & too many leave on & first & & tus dreams & express & we i & so crystal cruel & you & them with me & summer i & the you & & lantern & i were flight & it sight & you roof & & & & that you be & so & into my knees & hoping & it all chase & hatte & & & & you & you & & i & & & you & my life & you & & & & & it & be & & & decent & it with you & it feels like you & & & & & & on your life again & tender way &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.12307692307692308
+Jacard n=2: 0.018726591760299626
+
+**************************************************
+Strategy: prob
+Start token: SOS
+Prediction: standing boys cause farmers & struggle for me & than they talking the shade go & i made the the angel in the & & you & made breathed like her & & you & it out the wind & cat & made made & as i got & you & it in & have & & really like me & time & the barren & made the appear & all that you & at the & oh & i know it you want go & i would still have & every night & that i & made you leave & so & & i & hide & tell & stormy yesterday & children have play the freedom & it cried & you you & i & & are & & & & & i by i hide & & & & it goes set you down & so & & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.08571428571428572
+Jacard n=2: 0.021621621621621623
+
+**************************************************
+Strategy: prob
+Start token: random
+Prediction: year this is so quick & so i & & i none color you merge & i kissed you & in my & i said & was in humming in my eyes & could cross & the nobody though i want & & here & the can take & deep & & here & & go & should hide & that & & the nineteen & & & & & you gentle surrender & when it has it & too & & it should remember all my papers & tried & them & behind & i know behind you & & & & & like & & true & you the top i could be & & & & walk & from my & & that i from & that that & & & & & & & & & i know you & you & & & is it all tainted & & & & just me the time & so & & & & it with you & right & & maybe i could be on is & & & & & from you me & & & i have & that i & & maybe & is find way that you & & for you & & & know & it & so & so many nights change me & really with me & i toast show our joy our lives & you & i know & my world & i stay & you with the wind & & makes me happiness mistakes & peace mind behind & i i do my mind & & dream after & & the animal & & so blue & the child i & & block & & seek & & i could & & i & stay with you & me
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.11627906976744186
+Jacard n=2: 0.023166023166023165
+
+**************************************************
+Strategy: argmax
+Start token: first_word
+Prediction: close this your love i & you you you & together together together & & & i know through the back & & you & & & back back my you & & & you came you my back & baby else & i & & you waits for & & it else in my way & & i should i & that you & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.13043478260869565
+Jacard n=2: 0.02564102564102564
+
+**************************************************
+Strategy: argmax
+Start token: SOS
+Prediction: this life gone by & you come together together & & the the & you & i is through & the & & & & & & that you me & & & you could me & & & & like the sad love & & & & & in my & & & i should i & & please & & & & & you & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.16666666666666666
+Jacard n=2: 0.036036036036036036
+
+**************************************************
+Strategy: argmax
+Start token: random
+Prediction: year this moment will so & so i i guess & i other other & & it & through my eyes & you & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.13114754098360656
+Jacard n=2: 0.020202020202020204
+
+**************************************************
+Strategy: topk
+Start token: first_word
+Prediction: close this moment i love & you you i & & together together together in time & & & through the & the you is it that i was & & you & was taking way you could & & & & & i could be & i want & & baby & & the behind & & i & & you & & that else & you & & should i & & & & i could you & & & & it could be & & & & it could be & for & & & it seems be that i & & maybe & & & find way that you & & waiting for you & & & i could & here & & & & & & you & & & & should i go & should i & & you & & & should i & & you & it it seems & you i know & & & & for & & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.14102564102564102
+Jacard n=2: 0.034013605442176874
+
+**************************************************
+Strategy: topk
+Start token: SOS
+Prediction: standing for my down & you say dust & & ooo ooo & is born the & it all that i & made that made made & it you made me made & & like the & & the & & could i & that & could be & & & i could i the happy & & i i have the here & i & me i can you like should & & & & & & the & & & & behind me & & & it & & & that & behind & & you know me & & & & it it & i & & & & here we & & behind & & & me & & & & & & & & & & & & & & behind & sad as it stayed & sleep & sad behind & & i & & that i & just dream & & & & & & & & & & & & & & & & & & & & & & it & & & & maybe & more than sleep & & i i & before & i & & & & & you & & more & you i & & you & & & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.11764705882352941
+Jacard n=2: 0.030864197530864196
+
+**************************************************
+Strategy: topk
+Start token: random
+Prediction: year this name my so & & this i & other other other other & & i through through the tears & mother & i held me in the & & & you hold in you & & & & it came from that my & & i remember you my i & & you came that you could & & & was i & see the way & & else & i could & & & & you & & & & & & it & & that & & & & & & i could & be & & & & & & & & & & & & & & you & & more & it it from find way that & could & & change change mind & i could be be the & & i could i & & & & it seems be & way & & i should i & & so & it seems be right & & & maybe me like you took me & & & it me know & & here could be & for & & it out find me & & & i know & & you & so & you & me know & & it & so be & & & it out & & & & & & & & & it & so be & & & it with you & it me & & & & be & so here & so & & & it it & be & & & & baby & from me & & me & & & call me & me call me & & your own dreams & & the & & oh my is black child & you i really do & & forget me
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.15789473684210525
+Jacard n=2: 0.019417475728155338
+
+**************************************************
+Strategy: prob
+Start token: first_word
+Prediction: close whenever me love on five & you we mondays me painful the the & the it & & where & & i change i can & i i me & you & me me & now & & searching & & & hope i & know i & know for me mine & on on on one & on the i & now i i one been on & the & i & i & one i the & & still one the & is i & & my & revealed in & be still i can know i can & i be the & i i one i i day can can go & one i & now can be the be one i can the & i all where be can now the what that night the can is that be it i now that can be could poor be be be & this you can i i the now the i the what your what now you this world are you if are now you from what love are & you now on & now my the leave the us is you & now you & that you i you know you on you i you now & you & you & you & you that you you now you & you that i you now & & you now you & & words are & i & that & words & for <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.14285714285714285
+Jacard n=2: 0.017467248908296942
+
+**************************************************
+Strategy: prob
+Start token: SOS
+Prediction: bandits me have drank reminds & you can tenderly understand look & & & & with look can i can i i those can can & can can & & & & best & & & & but but love & & & & understand on & the the on on for the & some & on on day for on on the keep on & you & soothe & you night so what you & now you now your night night walking night the & love world the you & & night you night that & you what you the night can night that this the can on you you the you you & & now what on & that that & & your & know & you that & you you you you you you & the night your & that that anthrax you are <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.15
+Jacard n=2: 0.011560693641618497
+
+**************************************************
+Strategy: prob
+Start token: random
+Prediction: skin behind pacing you me slide & you we anything me in & & & the & & & can it & can can can & & can & & & you you you & love where & it & & & now so i & every know on i & is on i & the & i & on & on i & hope i how one hope & now one you & you could & now on one i you one now can night your & & night & & could now could now can & one night now could can that night & could your your that now that & can can now i & night can you that could could how now i for you that know that now on now the you can that you be & you that & now that now i what on i i know so all you the the now are all & now you now can & you now now the on the you you now & & the the know know now & you now now you times you world & now i are the you you that that it know & my you you & & know now know now know you & & times the <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.14814814814814814
+Jacard n=2: 0.014218009478672985
+
+**************************************************
+Strategy: argmax
+Start token: first_word
+Prediction: close whenever me time so your & you go might walking & & the the & & it it where where where & i & & & & & & me me me & & & & & & & i i & i & i & i & & & i & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & i & & & & & can i & & & can & can i & & & i & & i & i & & i & i & & i can & can i & can & can i & & can & can & & can i & & & can & & can i & you & you you & you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you & you you you you & you you you & you you & you you & you & you & you you & you & you & you & you & & you & & you & & & & & you & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.12698412698412698
+Jacard n=2: 0.028037383177570093
+
+**************************************************
+Strategy: argmax
+Start token: SOS
+Prediction: give me you on me & you can can understand & & & & & it it i can can can can can can can & & & & & & & & & & & & & & & & & & & & & & & & on & & & on & & & & & & one one one one one one one one one one one & & one one & & & & & & can & can can can & can & can & can that that & that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that & that that that that & that that now & that that now & that that & that that you & that you that you you that you & you that you you that you you & you you & you you you & you you & you you & you & you & you & now you & you & now you & now & now & now & now & now & now & now & now & now & now & now & now & now & now & now & now & & now & now & now & & now & now & now & & now & now & now & & now & now & now & & now & & now & & now & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.09836065573770492
+Jacard n=2: 0.037037037037037035
+
+**************************************************
+Strategy: argmax
+Start token: random
+Prediction: skin give me time on me & you can can me & & i & & & it i can can can can can can can & & & & & & & & & & & & & & & tell i & & i & i & & i & & & i & & & & i & & & & & & & & & & & & & & & & & & night could could could could could could could could & could could could could could could could could could could could could could could & could could could could could could could could could & could could could could could that & that that could that that that that that that that & that that that that that & that that & that you & you that you & you & you you & you you & you you & you you you you you & you you you & you you & you you & you & you & you & you & you & you & you & & you & now & now & now & now & now & now & now & now & now & & now & now & now & & now now & & now & now & now & now & now & & now now & & now & now & & now & & now & & & now & & & & now & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.07692307692307693
+Jacard n=2: 0.03636363636363636
+
+**************************************************
+Strategy: topk
+Start token: first_word
+Prediction: close whenever me time crowd blind & you we can might & & the & & & it every where where where i & i & & i & & me you it & & & you & & & & one i & & & on i i know & know & & the & i & & & i & i on & & & now the & & & on & i one & & on & & & i still & the & & can can i can i & the can & be be i & & be can i i i & & be & can i i be i can can i & i be & can can can can & & & & could & can be now & can i be i & be i & can i be that & & now i that i now & the i you now you the now now i the now the & i now now that & you now you now the you now the you you you & the you you now & & you & you on & you now you you you you & you & you i that now you you now now & i & you & you & know & you you & now you & know now & & now & now now you & & & & & you & now are & now & & & & you & i & & & & & now you now & & & & & & & you & i now & you & you you the i you & you & & that & & & & & & you & & & & you
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.1111111111111111
+Jacard n=2: 0.012578616352201259
+
+**************************************************
+Strategy: topk
+Start token: SOS
+Prediction: whenever magic you so dark & you can can understand & & & & it you it can & i can can can & & can & & want & & & & & & & & & for for & & for tell for know & i & & & know on & on know know on know & one & & one on one i & one one & & i & one one & now now one now can & can can now night now now can can can can that now can that & & now & can can can can that that can that that can that now & i that that i i that that that that & can that that that & that that & that can now & & & can that now that that that you that & & & now that now & now now & you & now that now now & you i know now you that you you & you you & & you now & now & that you you & & & you now now that & & that now i & that now & & & you you now now i you & you now & now you you & now & & are you are & & now now you now & & now are & & & know & & you you & now & are are you now & now & & & & & you & & you & now you now & you & you & & now i & & & & & & & & & & you you that & you & you & & & you & i now & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.11764705882352941
+Jacard n=2: 0.03289473684210526
+
+**************************************************
+Strategy: topk
+Start token: random
+Prediction: skin give me time on dark & you for can me look & & i & i & it it & can can can can & can & you & & & love & love & love & i & & the i & i tell i i the i i know & i & & & for i & & & & i i & & i my i the can & night i night & night night can & could night night night could could & night & could could could & night could could could & night that could & could that could now could could could can & & that could could could could & that can that & & could that that could that & could you you now now that you now that & you that you that the that & you now now now you that you that the i & i & & & & & can & i you you you i & you & & know you you you & & you i that & know you know & now you you & you & now & now know you now & you now now & now now & you & now now i are now & you are & you & & now now & & now now now & & you & now & & & & now you & i & now i & & & i now now & i you now & & now & & & now you & now & <EOS>
+Target: close your eyes give me your hand darling & do you feel my heart beating & do you understand & do you feel the same & am i only dreaming & is this burning an eternal flame & i believe meant be darling & i watch you when you are sleeping & you belong with me & do you feel the same & am i only dreaming & or is this burning an eternal flame & say my name sun shines through the rain & whole life so lonely & then you come ease the pain & i want lose this feeling & <EOS>
+Jacard n=1: 0.12857142857142856
+Jacard n=2: 0.03164556962025317
+
+**************************************************

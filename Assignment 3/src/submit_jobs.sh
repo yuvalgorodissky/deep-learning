@@ -18,9 +18,9 @@ NUM_LAYERS=2
 # Loop over combinations of melody_strategy and teacher_forcing
 for MELODY_STRATEGY in "${MELODY_STRATEGIES[@]}"; do
   for TEACHER_FORCING in "${TEACHER_FORCING_RATIOS[@]}"; do
-    MODEL_SAVE_PATH="${MODEL_SAVE_PATH_BASE}/melody_${MELODY_STRATEGY}_tf_${TEACHER_FORCING}"
+    MODEL_SAVE_PATH="${MODEL_SAVE_PATH_BASE}/model_${MELODY_STRATEGY}_tf_${TEACHER_FORCING}"
     WRITER_PATH="${WRITER_PATH_BASE}/melody_${MELODY_STRATEGY}_tf_${TEACHER_FORCING}"
-    sbatch main_job.sh \
+    sbatch "/dt/shabtaia/dt-sicpa/noam/deep-learning/Assignment 3/src/main_job.sh" \
       --midi_path "$MIDI_PATH" \
       --lyrics_path "$LYRICS_PATH" \
       --test_path "$TEST_PATH" \

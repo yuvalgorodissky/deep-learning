@@ -93,7 +93,7 @@ class lstm_seq2seq(nn.Module):
     ''' Train LSTM encoder-decoder and make predictions '''
 
     def __init__(self, input_size_encoder, hidden_size_encoder, input_size_decoder, hidden_size_decoder,
-                 vect_size_decoder, num_layers=1, dropout=0.3):
+                 vect_size_decoder,word2vec_model,word_to_index,vocabulary, num_layers=1, dropout=0.3):
         super(lstm_seq2seq, self).__init__()
         self.encoder = lstm_encoder(input_size=input_size_encoder, hidden_size=hidden_size_encoder,
                                     num_layers=num_layers)
@@ -104,6 +104,9 @@ class lstm_seq2seq(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.layer_norm = nn.LayerNorm(vect_size_decoder)
         self.init_weights()
+        self.word2vec = word2vec_model
+        self.word_to_index = word_to_index
+        self.vocabulary = vocabulary
 
     def init_weights(self):
         for name, param in self.named_parameters():
@@ -116,7 +119,7 @@ class lstm_seq2seq(nn.Module):
             elif 'linear' in name:  # Linear layer weights
                 torch.nn.init.kaiming_normal_(param.data)
 
-    def forward(self, melody_input, lyrics_input, vocabulary, word2vec, teacher_forcing_ratio=1,
+    def forward(self, melody_input, lyrics_input, teacher_forcing_ratio=1,
                 select_strategy='argmax',
                 temperature=1.0):
         batch_size = lyrics_input.shape[0]
@@ -155,7 +158,7 @@ class lstm_seq2seq(nn.Module):
 
             predictions.append(decoder_output)
 
-            decoder_output = [vocabulary[idx] for idx in decoder_output.tolist()]
+            decoder_output = [self.vocabulary[idx] for idx in decoder_output.tolist()]
 
             # Implementing teacher forcing
             if torch.rand(1).item() <= teacher_forcing_ratio:
@@ -163,7 +166,7 @@ class lstm_seq2seq(nn.Module):
             else:
                 words_embeddings = []
                 for i in range(batch_size):
-                    words_embeddings.append(get_embeddings(word2vec, decoder_output[i]))
+                    words_embeddings.append(get_embeddings(self.word2vec, decoder_output[i]))
                 last_output = torch.stack(words_embeddings, dim=0).view(batch_size, 1, self.decoder.input_size)
 
         predictions = torch.stack(predictions, dim=0)
@@ -171,12 +174,12 @@ class lstm_seq2seq(nn.Module):
 
         return predictions.T, logits.squeeze(2).transpose(0, 1)
 
-    def predict(self, melody_input, word2vec, vocabulary, select_strategy='argmax', temperature=1.0, max_length=300):
+    def predict(self, melody_input, select_strategy='argmax', temperature=1.0, max_length=300,start_word=SOS_TOKEN):
         batch_size = melody_input.shape[0]
         encoder_outputs, encoder_hidden, encoder_cell = self.encoder(melody_input)
         decoder_hidden, decoder_cell = encoder_hidden, encoder_cell
         predictions = []
-        last_output = get_embeddings(word2vec, SOS_TOKEN)
+        last_output = get_embeddings(self.word2vec, start_word)
         last_output = last_output.expand(batch_size, 1, self.decoder.input_size)
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         for t in range(max_length):
@@ -195,15 +198,18 @@ class lstm_seq2seq(nn.Module):
                     1)
             elif select_strategy == 'topk':
                 topk_probs, topk_indices = torch.topk(decoder_output, k=5, dim=2)
+                topk_indices = topk_indices.squeeze(1)  # This changes shape from [batch_size, 1, k] to [batch_size, k]
                 topk_probs = topk_probs.squeeze(1)
-                decoder_output = torch.multinomial(topk_probs, 1).squeeze(1)
+                sampled_indices = torch.multinomial(topk_probs, 1).squeeze(1)
+                final_indices = topk_indices.gather(1, sampled_indices.unsqueeze(1)).squeeze(1)
+                decoder_output = final_indices
             else:
                 raise ValueError('Invalid select_strategy')
             predictions.append(decoder_output)
             words_embeddings = []
-            decoder_output = [vocabulary[idx] for idx in decoder_output.tolist()]
+            decoder_output = [self.vocabulary[idx] for idx in decoder_output.tolist()]
             for i in range(batch_size):
-                words_embeddings.append(get_embeddings(word2vec, decoder_output[i]))
+                words_embeddings.append(get_embeddings(self.word2vec, decoder_output[i]))
             last_output = torch.stack(words_embeddings, dim=0).view(batch_size, 1, self.decoder.input_size)
 
         predictions = torch.stack(predictions, dim=0)

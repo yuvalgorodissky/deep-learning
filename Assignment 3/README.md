@@ -2,7 +2,7 @@
 
 ## Overview
 This project aims to build a recurrent neural network (RNN) for generating lyrics based on provided melodies using MIDI files. The model is trained to predict the next word of the lyrics given the current word and the melody information.
-![Model Architecture](images/Architecture.png "Model Architecture")
+<img src="images/Architecture.png" alt="Model Architecture" title="Model Architecture" width="1000">
 
 ## Structure
 - `data/`: Contains MIDI files and lyrics data.

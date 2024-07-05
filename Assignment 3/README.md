@@ -7,7 +7,7 @@ This project aims to build a recurrent neural network (RNN) for generating lyric
 ## Structure
 - `data/`: Contains MIDI files and lyrics data.
 - `src/`: Source code for data preprocessing, model definition, training, and lyric generation.
-- `report`: Report documenting the approach and results.
+- `Report.pdf`: Report documenting the approach and results.
 - `requirements.txt`: List of required Python packages.
 
 ## Instructions

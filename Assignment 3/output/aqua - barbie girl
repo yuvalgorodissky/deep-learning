@@ -1,3 +1,4 @@
+Model: model instrument tf 0.5
 Strategy: prob
 Start token: first_word
 Prediction: & & the smiling you you & & your got storm & the your your had your the been seen & the felt & the the bunch has & & has & & change & well & say & the neon talked & & things you & seen you the & & you can & me the & & & & & but the only know clouds heaven & & the the do & & & & the broomstick in & then & the the time & yeah africa or take & relations my & & <EOS>
@@ -6,6 +7,7 @@ Jacard n=1: 0.11320754716981132
 Jacard n=2: 0.030303030303030304
 
 **************************************************
+Model: model instrument tf 0.5
 Strategy: prob
 Start token: SOS
 Prediction: had had throwaway & you something & your breeze & you around & street & streets after kisses the people moonlight & fast people people & see & dream madrigal & you can it & & & your dream & but i letters & your para ooo me & & me & your the is me & & & the somebody & & good & & good & & & so much & & & so far & & i waiting for you so & & & & & so your & & the goes & & & & & the so & & & & your the & & eyes & <EOS>
@@ -14,6 +16,7 @@ Jacard n=1: 0.1346153846153846
 Jacard n=2: 0.035175879396984924
 
 **************************************************
+Model: model instrument tf 0.5
 Strategy: prob
 Start token: random
 Prediction: clock watching pawned is sometimes & & your good abstinence & & & i had do you the mood & you drink for the o'clock & you made contract & but the wounds recall & the kindness & & but the makes & the & you & snow & & & & the dream asked you & & bells & or walk away & & & better the target & & the jesus & coastline & <EOS>
@@ -22,6 +25,7 @@ Jacard n=1: 0.09345794392523364
 Jacard n=2: 0.026737967914438502
 
 **************************************************
+Model: model instrument tf 0.5
 Strategy: argmax
 Start token: first_word
 Prediction: & & yeah & you & you got your not your & & your your has has has your & & & this has come on & & & this is the easy play & say the & say & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & <EOS>
@@ -30,6 +34,7 @@ Jacard n=1: 0.11627906976744186
 Jacard n=2: 0.0379746835443038
 
 **************************************************
+Model: model instrument tf 0.5
 Strategy: argmax
 Start token: SOS
 Prediction: had had finding you you & & something the the & & your know & that right & & been been the for the & & & you the the the road & & say & & the road & & & & & for the & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & <EOS>
@@ -38,6 +43,7 @@ Jacard n=1: 0.07954545454545454
 Jacard n=2: 0.018633540372670808
 
 **************************************************
+Model: model instrument tf 0.5
 Strategy: argmax
 Start token: random
 Prediction: clock sleigh happy through & & & ever good up up & & up up the the & the the drink & drink the & & the the you & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & take & & & & take it & & & take it & & i take it & & & take it & & & i say & so & & & & my way & & me here & & baby baby & <EOS>
@@ -46,6 +52,7 @@ Jacard n=1: 0.13333333333333333
 Jacard n=2: 0.029411764705882353
 
 **************************************************
+Model: model instrument tf 0.5
 Strategy: topk
 Start token: first_word
 Prediction: & & yeah & you & & been your got your not & & your & has has has come & & this new & down the me & the the the & & & the the & but easy & & can call you & can do do & & you & in the & & know & & & & go & & i & & & & so & & & & the & & so & & & so & & & & so & & & & & & & & & & <EOS>
@@ -54,6 +61,7 @@ Jacard n=1: 0.14130434782608695
 Jacard n=2: 0.03428571428571429
 
 **************************************************
+Model: model instrument tf 0.5
 Strategy: topk
 Start token: SOS
 Prediction: had this times & you made & by the soul & & ride you & & & me & & the news the & it & is it it & & long i can come you so & & can i me & & & i & & & & & your way & & would have love me & i & you would & would give me & & i would you do & & i would you would love & & like & & you & & & my my & & it me & & i & feel & & & & you need & & i need you & & & & i need you & my need & here in my & in my & & <EOS>
@@ -62,6 +70,7 @@ Jacard n=1: 0.20212765957446807
 Jacard n=2: 0.03
 
 **************************************************
+Model: model instrument tf 0.5
 Strategy: topk
 Start token: random
 Prediction: clock just through seen seen & much your up & so hard could & you the perfect place & & been the the the the & & & the the & & the the & & but easy you & & so & & & the say & so & & & & so & & & the the way & know it & & & the & & & & & & & so & & so & give & & & & this & so & & & & the & & it me & & & & say & so i need & so & & & my my & & lord my & & <EOS>
@@ -70,6 +79,7 @@ Jacard n=1: 0.14583333333333334
 Jacard n=2: 0.02185792349726776
 
 **************************************************
+Model: model instrument tf 0
 Strategy: prob
 Start token: first_word
 Prediction: & & long rock you king see you change wants under i day time looking looking in & & & & just & & you & it before from & just & & & & you & tick & it & & always & the if me i just it & & you i you & the see start was & the it & & the got you you & that in in that was your & just you you i you hands the your got i you & & that in you your you in never you your & never you & you & was your i never the you in in in you in you you you got eyes your you you was in you you & in & you you the in never your you do you me in me you you you & & & & you you & has if you you you the your what you & your you in & you you you you you & & you & you & & you & you you & & & & & & & you & & & you me & & are & get & you & & & & & you the & & & & you you & <EOS>
@@ -78,6 +88,7 @@ Jacard n=1: 0.13592233009708737
 Jacard n=2: 0.030973451327433628
 
 **************************************************
+Model: model instrument tf 0
 Strategy: prob
 Start token: SOS
 Prediction: no so lean you & & emotion fools conscience lonelier asleep & time & you car & & & & & & & am feel such & can & & moment & & & & & the you me & try & & no you try try now it if that always & that & be it your made it me your & it your & your that your you want you your if you your or you your you you now it that your your your your be & your your your your i your & your & & your your your you your that go your your just your i your your your me your your your & you i you your that your your your your you your you you i you you you into that you it you you you me could your into now you & you & your & you & i you & you you & it & will & you & now & & & & & not & & down & & it down down & down do you & & & down do & & & & down & do & but do & & you & do & you & do & & & do & you do & & do & do & do & do & & do do & silly & & & <EOS>
@@ -86,6 +97,7 @@ Jacard n=1: 0.1619047619047619
 Jacard n=2: 0.03829787234042553
 
 **************************************************
+Model: model instrument tf 0
 Strategy: prob
 Start token: random
 Prediction: lowly had so good you want want said streets & i film buy regret break & egypt & my & & you with & & you & & & if & me dream me & me know inside & & & & keep & your keep you your & always & bad i & your made your your one you & you & you want you you me your me that your your your you your your you want your your your & your your you i & your the the your you your want want your me your your your you your your you your & your your your your ever your your try your you your your & your & you you you you you your you you if your you you your your you you & you you it was you your your your & you & & your your now & now you & ever down & now you & & & & & & & you & & be & do & & down do down & & & & do you your & down & do now & do do & & all do & do do & & & do & do & do do do do it & & do & do & & do & & & do you & & you do & do in & down & & & you do do & & do do & do do do do do & do & do do do do with do you <EOS>
@@ -94,6 +106,7 @@ Jacard n=1: 0.14150943396226415
 Jacard n=2: 0.04932735426008968
 
 **************************************************
+Model: model instrument tf 0
 Strategy: argmax
 Start token: first_word
 Prediction: & & long good you i see you wonder & again i go & & in & & & & & & & & & & & & & & & & & & & & make & & & & & & & & & & & & & & & & & & & & you & you & you & you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you & you you you you you & you you you you & you you you & you you you & you you you & you you & you you & you you & you you & you & you & you & you & you & you & you & you & you & you & you & you you & you you & you you you & you & you & you & & you & & you & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & you & & & & you & & & & you & & & & you & & & & & you & & & & & & you & & & & & & & you & & & &
@@ -102,6 +115,7 @@ Jacard n=1: 0.08333333333333333
 Jacard n=2: 0.03355704697986577
 
 **************************************************
+Model: model instrument tf 0
 Strategy: argmax
 Start token: SOS
 Prediction: no so good you & & that change & change change & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & you & now now now now now you & you your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your you you you you you you you you you you you you you you you you you you you you you you you you you you & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & do & & & & do & & do & & & do & & do & & & do & & do & & & do & & & do & & do & & & do & & do & & do & & do & & do do & do & do & do & do & do do & do & do do & do do & do do & do do & do do do & do do do
@@ -110,6 +124,7 @@ Jacard n=1: 0.058823529411764705
 Jacard n=2: 0.019736842105263157
 
 **************************************************
+Model: model instrument tf 0
 Strategy: argmax
 Start token: random
 Prediction: lowly light so good you i want you & & change change & & & & & & & & & & & & & & & & & & & & & & & me me me me me me & me & & keep & & & & & & your & your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your your you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you & you & you & & & & & & now & & & & & & & & & & & & & & & & & & & & & & & & do & & do & & & do & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & do & & & & & do & & & do & & do & & do & & do & do & do do & do do & do do do & do do do
@@ -118,6 +133,7 @@ Jacard n=1: 0.09302325581395349
 Jacard n=2: 0.02531645569620253
 
 **************************************************
+Model: model instrument tf 0
 Strategy: topk
 Start token: first_word
 Prediction: & & all love you i see you meet & understand go & & & in going & & & & you many & & & just & & & & & & & & & me you me & you & & me i & & you it & now now & & & & you you the & & i & was you you & your your your & you you you your you you your & you & & & you i you never & you you your never in you & your & you & in your you you you you & in your in never & in your in in you i you you i want you you & in in you you your you you you i in you you & you & you & you you & you in in me & & you & & & & ever & & you you me ever you & ever you you you you & you you you & you & & & & & you & you & & you & & & you & so & & & & & & & & & & you & & & & & & & & & & & & you you & do & & & you & love & & & & & & & & you love & & & & <EOS>
@@ -126,6 +142,7 @@ Jacard n=1: 0.16666666666666666
 Jacard n=2: 0.04081632653061224
 
 **************************************************
+Model: model instrument tf 0
 Strategy: topk
 Start token: SOS
 Prediction: no so good you & & that change & change better & have & & have & your & & your & & & & & & & & can can & & me & & & me & & keep me you & you keep try & try now you & & your you & it you & & it your & you you your you you your your your your you that your & you your your your i that your that your you your your your & you me & i your you your your your & me your your your your you & your you you your your your your your you you & you your me your your & your your your your you your your you you you now your you your you you me you & & you you your you you your now you it & it your & you you you you now you & & do & & & & & do & & do down & & & & down & down & & & do & & do be & & & & & do do & & & & do & do & do & do & & & & & & & do down & & do & do & you & & & & do do do & & do down you & & do & do & do down & do do & & do down do & & & <EOS>
@@ -134,6 +151,7 @@ Jacard n=1: 0.10989010989010989
 Jacard n=2: 0.031413612565445025
 
 **************************************************
+Model: model instrument tf 0
 Strategy: topk
 Start token: random
 Prediction: lowly light so good you fire & you & & change i & have & i going & & & you & & & & & & & & & & & can the & & me me me you & always keep me keep keep & & & me your & want your you your your that & you you your made & & you your want you you your your your you your your your your your your your your & your your & your & & your your you your you & you & your you your & your your your you & your your you you & & you & your your i your you your me you you me & your you your your your your you you you you your me your your you you your you you & you you you & now now now your your you & you & & now now you & do & do & & & down down do down do & do & & & & & & not & do & & down you & & & & down & do & & do do & do & & & do do & & do do do & do & & & do & & & & do & do & & & do do & & you do & & do do & do & & do & <EOS>
@@ -142,6 +160,7 @@ Jacard n=1: 0.12903225806451613
 Jacard n=2: 0.030927835051546393
 
 **************************************************
+Model: model piano roll tf 1.0
 Strategy: prob
 Start token: first_word
 Prediction: & & & & & & i has got my head tv & lips pour it around & zoot tv ahead & but i bitches hunter turns out moonlight & move down my heart in the & garden silver vows & if it hound me & target exist front & though i know flames from dre far & life blind in sight & approach the desert set the pullman & in the nails no poison mind & do you know the way san & been away so i may go wrong lose my way & do you know the way san & going back find some peace mind in san jose & is great big freeway & put hundred down buy car & in week maybe two make you star & weeks turn into how quick they pass & all the stars that never were & are parking cars pumping gas & got lots friends in san jose & do you know the way san & wait get back san jose & <EOS>
@@ -150,6 +169,7 @@ Jacard n=1: 0.1165644171779141
 Jacard n=2: 0.02181818181818182
 
 **************************************************
+Model: model piano roll tf 1.0
 Strategy: prob
 Start token: SOS
 Prediction: parts plans shark & slap little several hips doll & you can ta lady lovely & helter lane within gettin & once forever & baby all the time & amarillo britney frank & channel death & grabbed her pure bandits & she tragedy & that clear confidence & super militia & isles rumor & flowers always you could stay & easy lover & but an easy hustling boy & finger you know in the frontiers & turning through time & as more trophy freak & the survivor that wildest & the torn & aw help paper & manager star man & no one who could ever reach & was the son preacher man & <EOS>
@@ -158,6 +178,7 @@ Jacard n=1: 0.059602649006622516
 Jacard n=2: 0.012396694214876033
 
 **************************************************
+Model: model piano roll tf 1.0
 Strategy: prob
 Start token: random
 Prediction: spreadin holy counting cosa & going government find evil & we say goodbye for blinkered & oriental every wind that strung & way so cold & let sleigh how skelter & enchantment westward & consideration the astral & we can borne heaven free & nigh feel & parson yen & danger & grieving & chase & file five steer us & lame & you want me the sunshine & whenever you need me & thin graces te reed & you know you never dressed the thinks & why murder & crawled in deep nodded & facts domino & that tomorrows & lately often ting brain & pros got no never could & love try & you held & drop something me & & & want & steed & go around & he know what & buried inside her inside & myself alone be day & i lived the law & i hesitating sweeter than roam & giving us karma & somehow that whether is & novelist or & freewheeling meet & <EOS>
@@ -166,6 +187,7 @@ Jacard n=1: 0.11627906976744186
 Jacard n=2: 0.013559322033898305
 
 **************************************************
+Model: model piano roll tf 1.0
 Strategy: argmax
 Start token: first_word
 Prediction: & & & & & i got my head checked & by jumbo jet & it easy & but nothing is & no & & when i feel & pins needles & well i lie easy & all the time but never sure & why i need you & pleased meet you & i got my head down & when i was young & not my problem & not my problem & & when i know & pins needles & well i lie easy & all the time but i feel & why i need you & pleased love me & <EOS>
@@ -174,6 +196,7 @@ Jacard n=1: 0.12149532710280374
 Jacard n=2: 0.02617801047120419
 
 **************************************************
+Model: model piano roll tf 1.0
 Strategy: argmax
 Start token: SOS
 Prediction: after all the sun away & looking at me & feeling like child & vulnerability & i am shaking like leaf if you move beside me & all that i see & but no good just no good for me & <EOS>
@@ -182,6 +205,7 @@ Jacard n=1: 0.10101010101010101
 Jacard n=2: 0.01775147928994083
 
 **************************************************
+Model: model piano roll tf 1.0
 Strategy: argmax
 Start token: random
 Prediction: spreadin undeniable the kind down & hey you see are just from the man & nobody does that behind & the long time & i had my eyes in low & i had many my thoughts & i will give you i & my love & i will give you you & all that i need & i will give you you & baby i can love & i can take your mind again & i can follow you tomorrow & <EOS>
@@ -190,6 +214,7 @@ Jacard n=1: 0.12037037037037036
 Jacard n=2: 0.03684210526315789
 
 **************************************************
+Model: model piano roll tf 1.0
 Strategy: topk
 Start token: first_word
 Prediction: & & & & & i got my head checked & by jumbo jet & it easy & but nothing is & no & & when i feel & pins needles & well i lie easy & all the time but never sure & why i need you & make them bright when can & enough take me & if you want believe that i care & no matter what you do i only & be with you & this got the life & with you & so high & & & & & & i never knew there & knew no doubt in the mind & that everything is this boy & make loving be strong & if that should bring us someone & care child & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it & wrap it up take it
@@ -198,6 +223,7 @@ Jacard n=1: 0.176
 Jacard n=2: 0.03734439834024896
 
 **************************************************
+Model: model piano roll tf 1.0
 Strategy: topk
 Start token: SOS
 Prediction: after all the cash behind & end is living & on the top street & <EOS>
@@ -206,6 +232,7 @@ Jacard n=1: 0.056818181818181816
 Jacard n=2: 0.006756756756756757
 
 **************************************************
+Model: model piano roll tf 1.0
 Strategy: topk
 Start token: random
 Prediction: spreadin undeniable the we we & be together fun & unbelievable like river & apart from the start & so we can live it here & i want the rest watch & place if it really matter & strong between the heart & <EOS>
@@ -214,6 +241,7 @@ Jacard n=1: 0.12121212121212122
 Jacard n=2: 0.011428571428571429
 
 **************************************************
+Model: model instrument tf 1.0
 Strategy: prob
 Start token: first_word
 Prediction: & had y'all answer & magnolia closely & note name angels moonlit & fashion fulfilled & una mexican heaven & pullin threw yards & giddy & chromium place the build & pressure walked & end the girl cried than & the sherry & times my duchess & went in se skirts & the dart had time & after the whole barrio & now the myself play & the hottest girl ever went & now i know if we came log & tearing like silver reminded me & but you did as nature & flat & as always you could do & profile mine & enjoy & attend then much day & till you say & i never let ace & how close you always & when the time is through & love that the apart & i know we let the inland & yeah let me deceit & in the papers & honey we can show & need you & <EOS>
@@ -222,6 +250,7 @@ Jacard n=1: 0.13548387096774195
 Jacard n=2: 0.017605633802816902
 
 **************************************************
+Model: model instrument tf 1.0
 Strategy: prob
 Start token: SOS
 Prediction: had secret & claus eddie little girl & the lives in & air criticize the know & gentleness the getting man & africa checkin feel & even watchin laughed & mary said wide tastes town & flip weed rings like me & cause the most only i see & the honesty that i can & got hungry from downtown & maybe out prove & the played me with you & <EOS>
@@ -230,6 +259,7 @@ Jacard n=1: 0.11016949152542373
 Jacard n=2: 0.020202020202020204
 
 **************************************************
+Model: model instrument tf 1.0
 Strategy: prob
 Start token: random
 Prediction: louise had faster crushed & i cry the index saloon & trail sew & while california air cried flew across the seem side & the skis box birth & she said not me & she said that & boy i hips named reason & my types turns me down & guantanamo stunt & my name doll & my name is & my name & & <EOS>
@@ -238,6 +268,7 @@ Jacard n=1: 0.07017543859649122
 Jacard n=2: 0.015873015873015872
 
 **************************************************
+Model: model instrument tf 1.0
 Strategy: argmax
 Start token: first_word
 Prediction: & had be the queen was before & be the more now & now you know that & let your music go & when never i let you sleep & let me be the one if & we can share it we can sail & we can share it away & just dream about those two dreams & we know the things fantasies & though we know what i mean & when i hold you & i know if not changes & i be with you & i go on & i be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you & just be with you &
@@ -246,6 +277,7 @@ Jacard n=1: 0.12612612612612611
 Jacard n=2: 0.014423076923076924
 
 **************************************************
+Model: model instrument tf 1.0
 Strategy: argmax
 Start token: SOS
 Prediction: had be & the sun in your eyes & made some the lies worth believing & i am the eye in the sky & looking at you & i can read your mind & i am the maker rules & dealing with fools & i can cheat you blind & i need see any more & know that & i can read your mind i can read your mind & leave false illusions behind & cry cause i changing my mind & so find another fool like before & cause i live anymore believing & some the lies while all the signs are deceiving & <EOS>
@@ -254,6 +286,7 @@ Jacard n=1: 0.104
 Jacard n=2: 0.018779342723004695
 
 **************************************************
+Model: model instrument tf 1.0
 Strategy: argmax
 Start token: random
 Prediction: louise had ride & some secret place & then i was the woman & last one before & i looked at you & if i believe & & i look good & closer the closer & closer closer & closer closer & closer yeah & you see me & watching everyday & my smile could warm your frown & never look away & never look away & more me more & than what you see & when you look closer & closer closer & closer closer & closer closer & closer closer & closer yeah & you see me & watching everyday & my smile could warm your frown & never look away & never look away & more me more & than what you see & when you look closer & closer closer & closer closer & closer closer & closer closer & closer yeah & you see me & watching everyday & my smile could warm your frown & never look away & never look away & more me more & than what you see & when you look closer & closer closer & closer closer & closer closer & closer closer & closer yeah & you see me & watching everyday & my smile could warm your frown & never look away & never look away & more me more & than what you see & when you look closer & closer closer & closer closer & closer closer & closer closer & closer yeah & you see me & watching everyday & my smile could warm your frown & never look away & never look away & more me more & than what you see & when you look closer & closer closer & closer closer & closer closer & closer closer & closer yeah & you
@@ -262,6 +295,7 @@ Jacard n=1: 0.07142857142857142
 Jacard n=2: 0.025510204081632654
 
 **************************************************
+Model: model instrument tf 1.0
 Strategy: topk
 Start token: first_word
 Prediction: & had ride on the wind & wait for the man come & where he lovely her & i yes the way & where i held back & i was long find peace & how i feel seem more & i know i can do & i feel the same fool & <EOS>
@@ -270,6 +304,7 @@ Jacard n=1: 0.10784313725490197
 Jacard n=2: 0.022598870056497175
 
 **************************************************
+Model: model instrument tf 1.0
 Strategy: topk
 Start token: SOS
 Prediction: had crazy places & what i was wrong & then been by same hurt from me & now that i just make paid go & if i make the dream sights & find me any around & what got me & if i find myself & i said the fire before & hard keep on & say just one i words & & i said & <EOS>
@@ -278,6 +313,7 @@ Jacard n=1: 0.1111111111111111
 Jacard n=2: 0.021052631578947368
 
 **************************************************
+Model: model instrument tf 1.0
 Strategy: topk
 Start token: random
 Prediction: louise had ride & some secret place & then i kissed my baby guitar & then he see his face & yeah everybody did & the best thing forget & the look the look & his look his & he said & just the best ones could & the out the future & the midnight was in the fast & the he he tried hand you & that gone & back in the saddle again & & i heard & money then & & he was so & & on the midnight & whoa back on the floor & where town comes dreams now & closer than & where within & what makes & as long & you might & <EOS>
@@ -286,6 +322,7 @@ Jacard n=1: 0.0916030534351145
 Jacard n=2: 0.02127659574468085
 
 **************************************************
+Model: model piano roll tf 0.5
 Strategy: prob
 Start token: first_word
 Prediction: & on ready at & & it lifetime time & be before & other the slams down & consent & but i hoodlum be spent there by so & & & the voices are know & & & night want haggard & weary sista & i just feel singing the idea & & & all that time & i & very by that & like that swingers guitar slowly & part part time & i carry back & all the mind & leaf & if you get me & you never will & & & all the & & & & & & & & on the street & & & the & & all & & & & & & & & & & & & & & & time last & & all the all & years i fall & & & & & & & in & & & & & & & & & & & & & & & i & & & & that all the time & life in has & & & & & time at sombrero & & & you can pinched air borrowed on theaters & she all part those who could & & some time & you & & & & & & all the time & & & all & the & & all & the & & & & & <EOS>
@@ -294,6 +331,7 @@ Jacard n=1: 0.1450381679389313
 Jacard n=2: 0.04032258064516129
 
 **************************************************
+Model: model piano roll tf 0.5
 Strategy: prob
 Start token: SOS
 Prediction: mack through this & & burger black action the roadhouse & the the teacher & have small shame & & & they returning all there for & at the heart that working & waiting in he & & that long ago & here just too long & & out some time & & we carry no time & so garden say & & the & was nineteen & & drivin drove & as i on the style & on glass & they with & sound their carry free & all us harry that & often lightning & & & northwest prime suddenly the since & & & just & & & & & the the before & & the back summon & they can & never there & that was something & & & & life & then you out the mein & & we we & & for the & & & we had divorce & & way & & & the all & & & i was just better life & & & life & & & & & i saw the & & the & & the round i & & & & but the way so by & & & & & & they & the & & please & & & please & please september tell & & & tell you & & & i let it in & & & i was & & <EOS>
@@ -302,6 +340,7 @@ Jacard n=1: 0.1388888888888889
 Jacard n=2: 0.028268551236749116
 
 **************************************************
+Model: model piano roll tf 0.5
 Strategy: prob
 Start token: random
 Prediction: new soldier more spellbound & the sure & clubs na die & & so the memorize old & just yours & & & & in watching you & & & peace the should you & & that that & & & & & i & & can & in the & we & we & we & before & rumored & eddie the um & kiss city & the the the king & he heard & cocked as stolen & belongs last & & & conductors free & you caught around the expert & & some just never had & blues & be the & but i & the was so & i they & & & & & time & & i had & & i & & & & & & & & you & i & & & about the & i do & i rest our lives & & we the lawsuit receiving & images & drumstick & they can get their lust safe then & go their & & & all the time your & & all & i had & minarets as & & i pick & & big in the the & & & i i in on & & but all the that you & & & & in & & & you & & & you & & the & & & & & i & & & <EOS>
@@ -310,6 +349,7 @@ Jacard n=1: 0.1323529411764706
 Jacard n=2: 0.033962264150943396
 
 **************************************************
+Model: model piano roll tf 0.5
 Strategy: argmax
 Start token: first_word
 Prediction: & through morning why & & so the other & & the other & & the people & & & & & & & what i go & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
@@ -318,6 +358,7 @@ Jacard n=1: 0.05813953488372093
 Jacard n=2: 0.006711409395973154
 
 **************************************************
+Model: model piano roll tf 0.5
 Strategy: argmax
 Start token: SOS
 Prediction: on morning said & & forget the time & & & the the the & & the it & & & & it & & cause then you in the & & & out the & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
@@ -326,6 +367,7 @@ Jacard n=1: 0.06896551724137931
 Jacard n=2: 0.0
 
 **************************************************
+Model: model piano roll tf 0.5
 Strategy: argmax
 Start token: random
 Prediction: new through in after & in the sky & & & the finally & & & the & & & she in the sun in & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & & &
@@ -334,6 +376,7 @@ Jacard n=1: 0.034482758620689655
 Jacard n=2: 0.006622516556291391
 
 **************************************************
+Model: model piano roll tf 0.5
 Strategy: topk
 Start token: first_word
 Prediction: & on through said & & left so so other & & take my life so & & & & & & & & & in & & & never & & & & what & & & & & & & the & & so & & & & & & the & & & & & the & & & & & just know that & just & something & & & & time & & & & <EOS>
@@ -342,6 +385,7 @@ Jacard n=1: 0.0989010989010989
 Jacard n=2: 0.012048192771084338
 
 **************************************************
+Model: model piano roll tf 0.5
 Strategy: topk
 Start token: SOS
 Prediction: on place this & & in the left & & the dark & & the it it so & & & & in here in the music & like i can & you & & so loud & & & was & here out the & & & i was in & & & & & & & & & & & & that & & & i & & & & & & & in & tonight & & & & & so & & & & & in & & & & in the & very & that the & & & in the & & & just the time & & & & the & & & & & & & & & & & & & & & & & & & & & <EOS>
@@ -350,6 +394,7 @@ Jacard n=1: 0.14130434782608695
 Jacard n=2: 0.0335195530726257
 
 **************************************************
+Model: model piano roll tf 0.5
 Strategy: topk
 Start token: random
 Prediction: new morning we why & forget each other & & on the & & the smile gave & empty & & the world & & & it & & that & & cause then was & & oh & oh & & & the the street in & & & & & in the & & just like & wind as & & & & & & all in time & then & get get in & so & & & & & & the & & & we can do & that & that we never & & & & & & the & & & the & & & <EOS>
@@ -358,6 +403,7 @@ Jacard n=1: 0.14
 Jacard n=2: 0.020942408376963352
 
 **************************************************
+Model: model piano roll tf 0
 Strategy: prob
 Start token: first_word
 Prediction: & waterloo me cause content down re someday brought wanted the record paved & & i blowing familiar & & & your talking & goodbye & your & & & tropic me is i is & is & is & & nothing & would but i but & you you i & but but do you one hey me be i be & you be at be but do but me be be be but you cause be do be & be & but but can life you & someone & & my & i be & i at & & more be be cause & me be & but & & it you i life but you seems but i i you i my no i be be back but but your but but i steps & out be & i but but you i i & & i i now be be & be you not i you but you i you & be if i i & & <EOS>
@@ -366,6 +412,7 @@ Jacard n=1: 0.12612612612612611
 Jacard n=2: 0.029661016949152543
 
 **************************************************
+Model: model piano roll tf 0
 Strategy: prob
 Start token: SOS
 Prediction: fulfill you back the story absolutely & you you the kept the you & & talking were & & clown instead tired & your & & me summer & how tell is the & & & tell tell all you & more one & more it & & me one be & for & i one more but but more & but be & i if at you at always at be me you would you & do always would for do how & at i & believe & at always you you & you at do at you & you always let do let i you you everything you you do at at & you & & at you you & let let you everything feel you you know i & you you just you you believe you do & my back i everything everything you you be you i everything & & i let everything everything everything you everything everything everything i no i everything everything if & everything you everything everything i & & & everything everything everything you one everything everything you & you i <EOS>
@@ -374,6 +421,7 @@ Jacard n=1: 0.16346153846153846
 Jacard n=2: 0.028
 
 **************************************************
+Model: model piano roll tf 0
 Strategy: prob
 Start token: random
 Prediction: vibration parkway on better the trust everyday & you you though you express & & you devil love & & so soul beauty & you & deceived victim your & i & the i is all the the said the nothing said you said said & only do do only would & you you you i at would i would & you & would would & everything let at would would at & you would back do life you back i would you would let you let let let you you more at would let would you you i you let let let you let call was you you you you would let you you know you let at let you let you & let let let i you let at let let let & oh always you you let let i anything you know i & you i everything but let you you let your back & i & you your & you everything & you & you you all everything let i & you you & everything i let everything & & everything i & babe you i & you & you i you you you for you i <EOS>
@@ -382,6 +430,7 @@ Jacard n=1: 0.14953271028037382
 Jacard n=2: 0.02092050209205021
 
 **************************************************
+Model: model piano roll tf 0
 Strategy: argmax
 Start token: first_word
 Prediction: & & me & & in be & & you the the the & & & you & & & & & & & your & & & & me me me me & is is is is all & you you you you me you you but you you but you but & but & be be be be be be be & be be be be be & be be be be & be be & be be & be be & & be be & & be & & & & i & & but you & & but & i & & & i & & but you & i & & & i & & & i & & & but & i & & & & i & & & & & i & & & & & & i & & & & & i & & & & i & & & & i & & & i & & & & i & & & & & & & & & & & be & & be & & <EOS>
@@ -390,6 +439,7 @@ Jacard n=1: 0.10843373493975904
 Jacard n=2: 0.031446540880503145
 
 **************************************************
+Model: model piano roll tf 0
 Strategy: argmax
 Start token: SOS
 Prediction: it you problem the again first & & you the the the & & you you life & & & & & & & & & & the the the the the the the tell all all tell all all you & but but but but but but but but but but & but & but you but & & i at at at at you at at at you at at you at you at at you at you at you at you at you at you at you at you at you at you you at you at you you at you you at you you you you at you you you you you you you you you you you you you you you back you you you back you you you back you you you everything everything you & & you everything everything everything & & you & everything everything everything & & & & & & & & & & you & & & & you & & you you & you you you you you you you <EOS>
@@ -398,6 +448,7 @@ Jacard n=1: 0.09090909090909091
 Jacard n=2: 0.01764705882352941
 
 **************************************************
+Model: model piano roll tf 0
 Strategy: argmax
 Start token: random
 Prediction: vibration if down problem the move turning & you you you you & & you you you love & & & you & & & & & & your your the the the the the the the the the & & you & & but but but you you only would would would would would would would would would would would would you would would you would you would you would you would you would you would you you you would you you you you you you let let let let let let let let let let let let let let let you let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let let you let let you you let you you let you you you you you you you you you you you you you you you i you you you you you you i you you you you you you i you you you you you you i you you you you you you i you you you you you i you you you you you i you you you you you you i you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you you
@@ -406,6 +457,7 @@ Jacard n=1: 0.09090909090909091
 Jacard n=2: 0.012269938650306749
 
 **************************************************
+Model: model piano roll tf 0
 Strategy: topk
 Start token: first_word
 Prediction: & & me & & be low & & house is the feet & & & you life & & talking & hot & your & your & & & me me & & is & & & me is & me you me but it me you you you you but & & one but you & be one be but be i & be & be be & & be but i be be be be be be be & i & be be i be & but be you be you but you but be i but & be & but but & & but be you & & i but i you & but & but i & be but i & be & & & be you & & you & be & but i you & i & i i & be but & i i & but & but & i you but & & & be & be you but me be & you i i & & & & be & i & & <EOS>
@@ -414,6 +466,7 @@ Jacard n=1: 0.11363636363636363
 Jacard n=2: 0.026737967914438502
 
 **************************************************
+Model: model piano roll tf 0
 Strategy: topk
 Start token: SOS
 Prediction: it you back the again always & & you you the the & & life life & & & & that tired & & & & how & & & the & how tell the you & tell & all me & tell but but but but but but & but but you more i but you & i at you but be you & at i you you & at & at you at do at you you you at you at & at at you do at do at do i you at you at you you i at you at i at at & i you you you at at you at you i you you you i at you you you at you you you you & you back everything back you you you & you you you & i everything back you & everything everything everything you everything you & everything everything & everything you everything you everything i one & you everything & you & you <EOS>
@@ -422,6 +475,7 @@ Jacard n=1: 0.11956521739130435
 Jacard n=2: 0.020202020202020204
 
 **************************************************
+Model: model piano roll tf 0
 Strategy: topk
 Start token: random
 Prediction: vibration it down let the take turning & you be you if you & you you love & love so so me & you & & & your your your & & the the your the the the the & & the how & do you but only only you & you only would would would & would you you at would at you would at would would at would would at at & you you would at let would you would would you you back you you you you would you back at you & let you let let let you let you & let let let you you let you let you let let you you let let let let let you you i let let let let let let i you know let let let you you let let let you let let let let let let you let i you let let let i you & you you i & & you you & you you & & you & i i & you i you & & i you you & i you you i i let you you you you you you i you i you one you you & you you you & & you you i & you & you i you & you for you you i you you you you <EOS>

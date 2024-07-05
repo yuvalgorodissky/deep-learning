@@ -76,14 +76,17 @@ def main():
                 print("Start token: ", start_token)
                 jacard_results_n_1 = compare_songs(predictions, targets, 1)
                 jacard_results_n_2 = compare_songs(predictions, targets, 2)
-                for song_idx, (jacard_result_n_1, jacard_result_n_2) in enumerate(zip(jacard_results_n_1, jacard_results_n_2)):
-                    results[(song_idx,model_path, strategy, token_kinds[index])] = (
-                    predictions[song_idx], targets[song_idx], jacard_result_n_1, jacard_result_n_2)
-
+                for song_idx, (jacard_result_n_1, jacard_result_n_2) in enumerate(
+                        zip(jacard_results_n_1, jacard_results_n_2)):
+                    results[(song_idx, model_path, strategy, token_kinds[index])] = (
+                        predictions[song_idx], targets[song_idx], jacard_result_n_1, jacard_result_n_2)
 
     for song_idx, model_path, strategy, token_kind in results.keys():
-        predictions, targets, jacard_result_n_1, jacard_result_n_2 = results[(song_idx, model_path, strategy, token_kind)]
+        predictions, targets, jacard_result_n_1, jacard_result_n_2 = results[
+            (song_idx, model_path, strategy, token_kind)]
         with open(f'{args.output_dir}/song-{song_idx}.txt', "a") as f:
+            model_name = " ".join(model_path.split('_')[:-1])
+            f.write("Model: " + model_name + "\n")
             f.write("Strategy: " + strategy + "\n")
             f.write("Start token: " + token_kind + "\n")
             f.write("Prediction: " + predictions + "\n")
@@ -94,9 +97,8 @@ def main():
             f.write("*" * 50)
             f.write("\n")
 
-    #save results as csv file
-    export_result_dict(results,args.output_dir)
-
+    # save results as csv file
+    export_result_dict(results, args.output_dir)
 
 
 if __name__ == "__main__":

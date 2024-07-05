@@ -77,20 +77,6 @@ def main():
 
     save_model(model, args.model_save_path)
 
-    #
-    # model = load_model(args,args.model_save_path)
-    # model.to(device)
-    #
-    # test_dataloader = get_dataloader(lyrics_path=args.test_path, midis_path=args.midi_path, batch_size=args.batch_size,
-    #                                  word2vec_model=model.word2vec, word_to_index=model.word_to_index,
-    #                                  vocabulary=model.vocabulary,
-    #                                  melody_strategy=args.melody_strategy)
-    #
-    # predictions, targets = get_generated_lyrics(model, test_dataloader, device)
-    #
-    # for i in range(5):
-    #     print("prediction: ", predictions[i])
-    #     print("target: ", targets[i])
 
 
 

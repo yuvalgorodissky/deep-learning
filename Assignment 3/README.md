@@ -2,6 +2,7 @@
 
 ## Overview
 This project aims to build a recurrent neural network (RNN) for generating lyrics based on provided melodies using MIDI files. The model is trained to predict the next word of the lyrics given the current word and the melody information.
+![Model Architecture](images/Architecture.pdf "Model Architecture")
 
 ## Structure
 - `data/`: Contains MIDI files and lyrics data.
@@ -40,8 +41,24 @@ done
         print "," rest;  # Print the combined rest with a leading comma
     }' input_file > output_file
 ```
+3. model architecture 
+### Model Components and Architecture Overview
 
-3. Train the model:
+The `src/model.py` defines a sequence-to-sequence architecture with an LSTM encoder and decoder, integrated through an attention mechanism to effectively generate lyrics based on MIDI file inputs. The encoder processes melody sequences into a context-rich representation, while the decoder, guided by attention weights, predicts lyrics one word at a time. This model leverages attention to focus on relevant parts of the input melody, improving the accuracy and relevance of the generated lyrics.
+Certainly! Here’s a brief description of each class and component in the model:
+   
+   **Attention Class**: Computes the attention weights between the encoder outputs and the decoder's current hidden state to focus on relevant parts of the input sequence for better prediction accuracy.
+      
+   **lstm_encoder Class**: Encodes the input melody sequence using bidirectional LSTM layers, providing a comprehensive temporal representation of the input for the decoder.
+   
+   **lstm_decoder Class**: Decodes the encoded melody by integrating the attention mechanism and predicting the next word in the lyrics based on the current context and previous outputs.
+   
+   **lstm_seq2seq Class**: Orchestrates the overall process by linking the lstm_encoder and lstm_decoder through attention, managing the sequence generation from input melodies to lyric outputs.
+![Model Parameters]( images/Parameters.png "Model Parameters")
+
+
+
+4. Train the model:
    ```bash
    python src/main.py --midi_path "/path/to/midi_files" \
                    --lyrics_path "/path/to/lyrics.csv" \
@@ -75,8 +92,10 @@ done
    - **`--melody_strategy`**: Strategy to handle melody information (default: "piano_roll").
    - **`--teacher_forcing`**: Teacher forcing ratio (default: 0.5).
 
+![Loss Curves](images/Tensorboard.png "Training Loss Curves")
 
-4. Generate lyrics:
+
+5. Generate lyrics:
   
 ### Function: get_generated_lyrics
 The `get_generated_lyrics` function is designed to generate song lyrics automatically based on provided melody features and initial start words. This function is part of the `generate_lyrics.py` script, which can be executed as described in the project's README file. Here's a breakdown of how this function works and what each parameter means:
@@ -95,7 +114,7 @@ The `get_generated_lyrics` function is designed to generate song lyrics automati
 - **targets**: A list of the target lyrics from the dataloader, useful for evaluation and comparison purposes.
 
 
-5. View the results and analysis in the `src/evaluation.py` file.
+6. View the results and analysis in the `src/evaluation.py` file.
 The `evaluation.py` script is designed to assess the performance of trained models on generating lyrics. It provides a structured evaluation using several metrics and strategies to understand model effectiveness and areas of potential improvement. Below is a guide on how to utilize the script, the parameters involved, and what to expect from the outputs.
 #### Parameters:
 To run the script, several parameters need to be specified through the command line:
